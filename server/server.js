@@ -8,6 +8,8 @@ const massive = require('massive');
 const session = require('express-session');
 
 const app = express();
+app.use( bodyParser.json() );
+app.use( express.static( `${__dirname}/../public/build` ) );
 
 app.use(session({
   secret: process.env.SECRET,
@@ -16,15 +18,15 @@ app.use(session({
 }));
 
 //MIDDLEWARE
-app.use(passport.initialize());
-app.use(passport.session());
+app.use( passport.initialize() );
+app.use( passport.session() );
 
 //DATABASE CONNECTION
-massive(process.env.CONNECTIONSTRING).then( db => {
+massive( process.env.CONNECTIONSTRING ).then( db => {
   app.set('db', db);
 });
 
-//AUTHENTICATION
+//AUTHENTICATION (AUTH0)
 passport.use(new Auth0Strategy({
   domain: process.env.AUTH_DOMAIN,
   clientID: process.env.AUTH_CLIENT_ID,
@@ -59,14 +61,14 @@ passport.deserializeUser(function(user, done){
   })
 });
 
-//SET UP OUR ENDPOINTS (NEED 4 ENDPOINT PER OUR DESIGN)
+//SET UP OUR AUTH ENDPOINTS 
 //ENDPOINT #1
 app.get('/auth', passport.authenticate('auth0'));
 
 //ENDPOINT #2
 app.get('/auth/callback', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/private',
-  failureRedirect: 'http://localhost:3000/#/'
+  successRedirect: 'http://localhost:3000/#/Dashboard',
+  failureRedirect: 'http://localhost:3000/#/ParentPortal'
 }));
 
 //ENDPOINT #3

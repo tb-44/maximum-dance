@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './Home/Home';
 import About from './About/About';
 import { Link } from 'react-router-dom';
+import homeIcon from '../../img/home.png';
 import './Header.css';
 
 class Header extends Component {
@@ -9,12 +10,12 @@ class Header extends Component {
     return (
       <div className="Header">
 
-      <header>
+        <header>
   						<nav>
-  							<h1>Home</h1>
-  							<Link to="/home">Home</Link>
+  							<h1>Maximum Dance</h1>
+  							<Link to="/home"><img src={homeIcon} alt="Home" /></Link>
   						</nav>
-  		</header>
+  		  </header>
 
       </div>
     );

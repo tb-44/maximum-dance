@@ -13,7 +13,6 @@ export default (
     <Route component={ About } path="/about" />
     <Route component={ Schedule } path="/schedule" />
     <Route component={ ParentPortal } path="/parentportal" />
-    <Route component={ Dashboard } path="/dashboard" />
     <Route component={ Contact } path="/contact" />
   </Switch>
 )

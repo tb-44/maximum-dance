@@ -12,6 +12,8 @@ class App extends Component {
           <Link to='/'>Home</Link>
           <Link to='/About'>About</Link>
           <Link to='/Schedule'>Schedule</Link>
+          <Link to='/ParentPortal'>Parent Portal</Link>
+          <Link to='/Contact'>Contact</Link>
         </nav>
 
           { router }

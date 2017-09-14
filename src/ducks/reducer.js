@@ -1,28 +1,28 @@
 import axios from 'axios';
 //SET INITIAL STATE
 const initialState = {
-    user: {}
+    parent: {}
 }
 
 //ACTION TYPES
-const GET_USER_INFO = "GET_USER_INFO";
+const GET_PARENT_INFO = "GET_PARENT_INFO";
 
 //ACTION CREATORS
-export function getUserInfo() {
-    const userInfo = axios.get('/auth/me').then( res => {
+export function getParentInfo() {
+    const parentInfo = axios.get('/auth/me').then( res => {
         return res.data
     })
     return {
-        type: GET_USER_INFO,
-        payload: userInfo
+        type: GET_PARENT_INFO,
+        payload: parentInfo
     }
 }
 
 //REDUCER FUNCTION
 export default function reducer(state = initialState, action) {
     switch(action.type) {
-        case GET_USER_INFO + '_FULFILLED':
-            return Object.assign({}, state, { user: action.payload })
+        case GET_PARENT_INFO + '_FULFILLED':
+            return Object.assign({}, state, { parent: action.payload })
         default:
             return state;
     }

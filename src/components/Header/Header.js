@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Home from './Home/Home';
-import About from './About/About';
 import { Link } from 'react-router-dom';
-import homeIcon from '../../img/home.png';
+
 import './Header.css';
 
 class Header extends Component {
@@ -11,11 +9,16 @@ class Header extends Component {
       <div className="Header">
 
         <header>
-  						<nav>
-  							<h1>Maximum Dance</h1>
-  							<Link to="/home"><img src={homeIcon} alt="Home" /></Link>
-  						</nav>
-  		  </header>
+          <nav>
+            <div>
+              <Link to='/'>Home</Link>
+              <Link to='/About'>About</Link>
+              <Link to='/Schedule'>Schedule</Link>
+              <Link to='/ParentPortal'>Parent Portal</Link>
+              <Link to='/Contact'>Contact</Link>
+            </div>
+          </nav>
+        </header>
 
       </div>
     );

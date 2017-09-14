@@ -33,46 +33,53 @@ passport.use(new Auth0Strategy({
   clientSecret: process.env.AUTH_CLIENT_SECRET,
   callbackURL: process.env.AUTH_CALLBACK
 }, function(accessToken, refreshToken, extraParams, profile, done){
-     console.log(profile);
-
+    
   const db = app.get('db');
-  db.find_user(profile.id).then( user => {
+  db.find_parent(profile.id).then( user => {
     console.log(user);
     if(user[0]) {
       return done(null, user);
     } else {
-      db.create_user([profile.displayName, profile.emails[0].value,
-      profile.picture, profile.id]).then(user => {
-        return done(null, user[0]);
+      db.create_parent([profile.id, profile.name.givenName, profile.name.familyName, profile.emails[0].value,
+      profile.picture]).then(user => {
+        return done(null, user);
       })
     }
   })
 }));
 
-//THIS IS INVOKED ONE TIME TO SET THINGS UP
+//THIS IS INVOKED ONE TIME TO SET UP
 passport.serializeUser(function(user, done) {
-  done(null, user);
+  console.log('serial: ', user);
+  done(null, user[0]);
 });
 
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(user, done){
-  app.get('db').find_session_user(user[0].id).then(user => {
-    return done(null, user[0]);
-  })
+  console.log('deserial: ', user);
+  // app.get('db').find_session_parent(user[0].id).then(user => {
+  //   return done(null, user[0]);
+  // })
+  done(null, user);
 });
 
 //SET UP OUR AUTH ENDPOINTS 
 //ENDPOINT #1
-app.get('/auth', passport.authenticate('auth0'));
+app.get('/auth', passport.authenticate('auth0', {
+  successRedirect: 'http://localhost:3000/#/dashboard',
+  failureRedirect: 'http://localhost:3000/#/'
+}));
 
 //ENDPOINT #2
-app.get('/auth/callback', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/Dashboard',
-  failureRedirect: 'http://localhost:3000/#/ParentPortal'
-}));
+// app.get('/auth/callback', passport.authenticate('auth0', {
+//   successRedirect: '/',
+//   failureRedirect: '/#/parentportal'
+// }));
 
 //ENDPOINT #3
 app.get('/auth/me', (req, res) => {
+  console.log(req.session)
+  console.log(req.user);
   if(!req.user) {
     return res.status(404).send('User not found')
   } else {

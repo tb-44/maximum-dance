@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
 body{
      background-image: url("https://i.pinimg.com/originals/88/01/d8/8801d84a77e9235515a927436f9877df.jpg");
     /*background-image: linear-gradient(99deg, #FF70A6, #ff9770 40%, #ffd670 73%, #e9ff70);*/
@@ -16,12 +17,12 @@ body{
     box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
     border-radius: 8px;
     background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
-   padding: 60px;
-  min-width: 500px;
-  display: flex;
-  color: black;
-  justify-content: center;
-  align-items: center;
+    padding: 60px;
+    min-width: 500px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
 
 }
 .login-container{
@@ -33,7 +34,7 @@ body{
 .logo{
   margin-top: 10px;
 }
-.helo{
+.parent-portal {
   font-family: 'Open Sans';
   font-size: 80px;
   font-weight: bold;
@@ -42,6 +43,7 @@ body{
 
 
 }
+
 .login-button {
 	color: #fff;
 	background-color: #403d39;
@@ -55,3 +57,4 @@ body{
 
 
 }
+

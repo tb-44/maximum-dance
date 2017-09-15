@@ -1,10 +1,11 @@
 .container {
     max-width: 960px;
     margin: 0 auto;
+    
   }
   section.section:last-child {
     margin-bottom: 0;
-    background-color: darkgray;
+    background-color: darkgray !important;
   }
   section.section h2 {
     margin-bottom: 40px;
@@ -26,6 +27,7 @@
     padding: 40px 0;
     background-color: pink;
   }
+
   section.section.parallax {
     height: 600px;
     background-position: 50% 50%;
@@ -43,13 +45,13 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   section.section.parallax-1 {
-    background-image: url('./adam-littman-davis-269635.jpg');
+    background-image: url('./citydance.jpeg');
   }
   section.section.parallax-2 {
-    background-image: url('./alexandre-tsuchiya-333890.jpg');
+    background-image: url('./dance2.jpeg');
   }
   section.section.parallax-3 {
-    background-image: url('./miguel-salgado-160276.jpg');
+    background-image: url('./group.jpeg');
   }
   @media all and (min-width: 600px) {
     section.section h2 {

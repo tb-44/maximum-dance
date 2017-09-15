@@ -13,11 +13,11 @@ class Header extends Component {
 
           <div id="header">
           <ul id="desktop_nav">
-            <li><Link to="/" className="active">Home</Link></li>
-            <li><Link to="/about" className="active">About</Link></li>
-            <li><Link to="/schedule" className="active">Schedule</Link></li>
-            <li><Link to="/parentportal" className="active">Parent Portal</Link></li>
-            <li><Link to="/contact" className="active">Contact</Link></li>
+            <a><Link to="/" className="active">Home</Link></a>
+            <a><Link to="/about" className="active">About</Link></a>
+            <a><Link to="/schedule" className="active">Schedule</Link></a>
+            <a><Link to="/parentportal" className="active">Parent Portal</Link></a>
+            <a><Link to="/contact" className="active">Contact</Link></a>
           </ul>
           </div>
           </nav> 

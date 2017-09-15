@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
+import { instructor1 } from './instructor1.jpg';
 import './About.css';
 
 class About extends Component {
@@ -9,9 +10,8 @@ class About extends Component {
         <Header />
 
         <section className="section parallax parallax-1">
-
           <div className="container">
-            <h1>Section 1</h1>
+            <h1>Dance</h1>
           </div>
         </section>
         <section className="section content">
@@ -22,27 +22,29 @@ class About extends Component {
               to excel with well rounded technique
             </p>
             <h2>OUR MOTTO</h2>
-            <p>'Dancing is the closest thing to Magic!'</p>
+            <p>Dancing is the closest thing to Magic</p>
             
           </div>
         </section>
         <section className="section parallax parallax-2">
           <div className="container">
-            <h1>Section 2</h1>
+            <h1>IS</h1>
           </div>
         </section>
         <section className="section content">
           <div className="container">
 
-            <h2>BIOS</h2>
-            <p>Dance Bios</p>
-            <p>Pics</p>
+            <h2>DANCE INSTRUCTOR BIOS</h2>
+
+            <div className="instructor1">
+            <img src={instructor1} alt=""/> 
+            </div>
             
           </div>
         </section>
         <section className="section parallax parallax-3">
           <div className="container">
-            <h1>Section 3</h1>
+            <h1>MAGIC</h1>
           </div>
         </section>
         <section className="section content">

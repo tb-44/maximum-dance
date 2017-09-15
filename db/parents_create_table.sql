@@ -3,8 +3,11 @@ CREATE TABLE parents(
     auth_id TEXT,
     firstName VARCHAR(80),
     lastName VARCHAR(80),
-    email TEXT,
-    phone TEXT,
     address TEXT,
+    city TEXT,
+    state TEXT,
+    zip TEXT,
+    phone TEXT,
+    email TEXT,
     img TEXT
 );

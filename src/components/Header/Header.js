@@ -9,7 +9,6 @@ class Header extends Component {
     return (
       
           <nav className="main_header">
-         
 
           <div id="header">
           <ul id="desktop_nav">

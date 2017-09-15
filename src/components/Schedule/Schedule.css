@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+ .schedule_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+} 
+
+.big_calender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 676px;
+    height: 676px;
+}

@@ -13,7 +13,6 @@ class Dashboard extends Component {
   render() {
     return (
 
-      
        <div id="header"><Header pageTitle="Dashboard"/>
         <section className="dashpage">
          <h1>Maximum Dance</h1>

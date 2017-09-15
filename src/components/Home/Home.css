@@ -26,6 +26,47 @@
   height: 100%;
 }
 
+.central-login{
+  box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+  background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
+  padding: 60px;
+  min-width: 500px;
+  display: flex;
+color: white;
+justify-content: center;
+align-items: center;
+
+}
+
+.login-container{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+ }
+ .logo{
+  margin-top: 10px;
+ }
+ .dance-logo{
+  font-family: 'Open Sans';
+  font-size: 100px;
+  font-weight: bold;
+ }
+ 
+ .login-button {
+  color: #fff;
+  background-color: #403d39;
+  /* background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2); */
+   border-radius: 4px;
+  padding: 5px 20px;
+  border: none;
+  min-width: 350px;
+  height: 40px; 
+ 
+ }   
+
 @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     height: 300%;
@@ -44,50 +85,4 @@
   .fullscreen-bg {
     background: url('https://i.pinimg.com/736x/c3/4a/1c/c34a1ce169d0688174e45ed47f4bdd3b--beach-dance-photography-sunset-photography.jpg') center center / cover no-repeat;
   }
-
-  .fullscreen-bg__video {
-    display: none;
-  }
 }
-
-.central-login{
-   box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
-   border-radius: 8px;
-   background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
-   padding: 60px;
-   min-width: 500px;
-   display: flex;
- color: white;
- justify-content: center;
- align-items: center;
-
-}
-.login-container{
- display:flex;
- flex-direction: column;
- align-items:center;
- justify-content:center;
-}
-.logo{
- margin-top: 10px;
-}
-.dance-logo{
- font-family: 'Open Sans';
- font-size: 100px;
- font-weight: bold;
-}
-.login-button-container {
-
-}
-.login-button {
- color: #fff;
- background-color: #403d39;
- /* background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
- box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2); */
-  border-radius: 4px;
- padding: 5px 20px;
- border: none;
- min-width: 350px;
- height: 40px; 
-
-}   

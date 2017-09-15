@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import './ParentPortal.css';
 import Header from './../Header/Header';
-import axios from 'axios';
+// import axios from 'axios';
 import logo from './Slice.png';
 import imgLogo from './Maximun Dance.png';
 
 
 class ParentPortal extends Component {
 
-  test() {
-    axios.get('/auth/me').then(res => {
-      console.log(res);
-    })
-  }
+  // test() {
+  //   axios.get('/auth/me').then(res => {
+  //     console.log(res);
+  //   })
+  // }
 
 render() {
 		return (
-			<div className="main-container">
-				<Header/>
+			<div id="dashboard"><Header pageTitle="Dashboard"/>
+			
 				<div className="central-login">
 					<div className="login-container">
 
@@ -39,7 +39,7 @@ render() {
 						</div>
 					</div>
 				</div>
-        <button onClick={this.test}>test</button>
+        {/* <button onClick={this.test}>test</button> */}
 			</div>
 		)
 	}

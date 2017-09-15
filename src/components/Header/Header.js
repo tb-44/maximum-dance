@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+// import logo from './../Home/Slice.png';
+// import imgLogo from './../Home/Maximun Dance.png';
 import './Header.css';
 
 class Header extends Component {
   render() {
     return (
-      <div className="Header">
+      
+          <nav className="main_header">
+         
 
-        <header>
-          <nav>
-            <div>
-              <Link to='/'>Home</Link>
-              <Link to='/About'>About</Link>
-              <Link to='/Schedule'>Schedule</Link>
-              <Link to='/ParentPortal'>Parent Portal</Link>
-              <Link to='/Contact'>Contact</Link>
-            </div>
-          </nav>
-        </header>
-
-      </div>
+          <div id="header">
+          <ul id="desktop_nav">
+            <li><Link to="/" className="active">Home</Link></li>
+            <li><Link to="/about" className="active">About</Link></li>
+            <li><Link to="/schedule" className="active">Schedule</Link></li>
+            <li><Link to="/parentportal" className="active">Parent Portal</Link></li>
+            <li><Link to="/contact" className="active">Contact</Link></li>
+          </ul>
+          </div>
+          </nav> 
     );
   }
 }

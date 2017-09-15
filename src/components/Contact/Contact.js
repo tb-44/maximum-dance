@@ -7,7 +7,7 @@ class Contact extends Component {
     return (
       <div className="Contact">
         <Header/>
-        This is the Contact page
+        This is the contact page
       </div>
     );
   }

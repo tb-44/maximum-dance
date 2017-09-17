@@ -60,6 +60,14 @@ class Dashboard extends Component {
         <input type="submit" value="Submit" />
         </form>
 
+        //DROP DOWN MENUS
+        <select>
+           <option value="grapefruit">Grapefruit</option>
+          <option value="lime">Lime</option>
+          <option selected value="coconut">Coconut</option>
+          <option value="mango">Mango</option>
+      </select>
+
 
          <h1>Maximum Dance</h1>
          <div className='parentContainer'>

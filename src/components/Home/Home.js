@@ -2,37 +2,61 @@ import React, { Component } from 'react';
 import Header from './../Header/Header';
 import videobkgd from './DanceMov.mp4';
 import videobkgd1 from './DanceMov.webm';
+import Sidenav from './Sidenav';
+import homeIcon from './maximum-dance-logo-video-overlay.png';
+import svg from './hamburger.svg';
 import './Home.css';
 
 class Home extends Component {
+	constructor() {
+		super();
+	
+		this.state = {
+		  showMenu: false,
+		  showSubMenu: false
+		}
+		this.toggleMenu = this.toggleMenu.bind(this);
+		this.toggleSubMenu = this.toggleSubMenu.bind(this);
+	  }
+	
+	  toggleMenu() {
+		this.setState({
+		  showMenu: !this.state.showMenu
+		})
+	  }
+	  toggleSubMenu() {
+		this.setState({
+		  showSubMenu: !this.state.showSubMenu
+		})
+	  }
 
 	render() {
 
 		return (
 
-			<div id="header"><Header pageTitle="home" />
-				<section className="homepage">
+			<div className="main-container">
+				<Header/>
+				
+				<div className="homepage">
+				<div>
+				<button className="logo" onClick={() => this.toggleMenu()}>
+					<img src={svg} alt=""/></button>
+				</div>
+
+        		<Sidenav toggleMenu={this.toggleMenu}
+                		 showMenu={this.state.showMenu}
+                		 toggleSubMenu={this.toggleSubMenu}
+                		 showSubMenu={this.state.showSubMenu}/>
 
 					<div className="fullscreen-bg">
-						<video className="fullscreen-bg__video" autoPlay preload loop muted width="600" height="300">
+					<img src={homeIcon} alt='' className="video-overlay"/>
+						<video className="fullscreen-bg__video" autoPlay preload loop muted width="650" height="350">
 							<source src={videobkgd} type="video/mp4" />
 							<source src={videobkgd1} type="video/webm" />
 						</video>
 					</div>
 
-					<div className="central-login">
-						<div className="login-container">
-							<div className="dance-logo">
-								Maximum Dance
-                        	</div>
-
-							<div className="home-login-button-container">
-								<a href={process.env.REACT_APP_LOGIN}><button className="login-button raise">Login</button></a>
-							</div>
-
-						</div>
-					</div>
-				</section>
+				</div>
 			</div>
 		)
 	}

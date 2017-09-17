@@ -52,7 +52,6 @@ class About extends Component {
 
             <h2>DANCE CLASSES</h2>
             <p>LIST OF CLASSES</p>
-            <p>Students with pictures</p>
             
           </div>
         </section>

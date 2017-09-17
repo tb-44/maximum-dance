@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component {
+  
   render() {
     return (
-      
-          <nav className="main_header">
-
+  
+        <nav className="main_header">
           <div id="header">
-          <ul id="desktop_nav">
+          <ul className="desktop_nav">
             <a><Link to="/" className="active">Home</Link></a>
             <a><Link to="/about" className="active">About</Link></a>
             <a><Link to="/schedule" className="active">Schedule</Link></a>
@@ -19,7 +19,7 @@ class Header extends Component {
             <a><Link to="/contact" className="active">Contact</Link></a>
           </ul>
           </div>
-          </nav> 
+        </nav> 
     );
   }
 }

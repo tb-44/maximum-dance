@@ -4,26 +4,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
 } 
 
-.fullscreen-bg {
-  position: fixed;
+.homepage {
+  
+}
+
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: auto;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -100;
+  opacity: 0.85;
+}
+.fullscreen-bg {
+ /* background: url('maximum-dance-logo-video-overlay.png') center center no-repeat; */
+  /* overflow: hidden; */
+  /* z-index: -100; */
+  float: left;
+  position: relative;
 }
 
 .fullscreen-bg__video {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .central-login {
@@ -31,7 +40,7 @@
   border-radius: 8px;
   background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
   padding: 60px;
-  min-width: 500px;
+  /* min-width: 500px; */
   display: flex;
   color: white;
   justify-content: center;
@@ -78,19 +87,19 @@
   margin-left: 5px;
 }
 
-@media (min-aspect-ratio: 16/9) {
+/* @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     height: 300%;
     top: -100%;
   }
-}
+} */
 
-@media (max-aspect-ratio: 16/9) {
+/* @media (max-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     width: 300%;
     left: -100%;
   }
-}
+} */
 
 @media (max-width: 767px) {
   .fullscreen-bg {

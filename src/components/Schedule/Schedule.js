@@ -15,18 +15,23 @@ class Schedule extends Component {
 
       <div className="schedule_container">
         <div className="header">
+          <div>
           <Header />
-        </div>
-
+          </div>
+      <section className="schedule_page">
         <div>
           This is the Schedule Page
         </div>
+        </section>
 
+      <section>
         <div className="big_calender">
           <BigCalendar
             events={myEventsList}
             startAccessor='startDate'
             endAccessor='endDate' />
+        </div>
+        </section>
         </div>
       </div>
     );

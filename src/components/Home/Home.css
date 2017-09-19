@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
  .main-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh;
-  width: 100vw; */
+  height: 100vh;
+  width: 100vw;
 } 
-
-.homepage {
-  
-}
 
 .video-overlay {
   position: absolute;
@@ -35,74 +31,29 @@
   height: auto;
 }
 
-.central-login {
-  box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
-  border-radius: 8px;
-  background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
-  padding: 60px;
-  /* min-width: 500px; */
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-container{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:center;
- }
-
  .logo{
-  margin-top: 10px;
+  z-index: 100;
+  position: fixed;
+  padding-top: 55px;
+  padding-left: 15px;
  }
- 
- .dance-logo{
-  font-family: 'Open Sans';
-  font-size: 100px;
-  font-weight: bold;
- }
- 
- .login-button{
-  color: #fff;
-  background-color: #403d39;
-  /* background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
-  box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2); */
-   border-radius: 4px;
-  padding: 5px 20px;
-  border: none;
-  min-width: 150px;
-  height: 40px; 
- 
- }   
 
- button{
-  width: 100px;
-  background-color: #bff8ff;
-  border: none;
-  height: 50px;
-  border-radius: 30px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-/* @media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     height: 300%;
     top: -100%;
   }
-} */
+} 
 
-/* @media (max-aspect-ratio: 16/9) {
+ @media (max-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     width: 300%;
     left: -100%;
   }
-} */
+}
 
 @media (max-width: 767px) {
   .fullscreen-bg {
     background: url('https://i.pinimg.com/736x/c3/4a/1c/c34a1ce169d0688174e45ed47f4bdd3b--beach-dance-photography-sunset-photography.jpg') center center / cover no-repeat;
   }
-}
+} 

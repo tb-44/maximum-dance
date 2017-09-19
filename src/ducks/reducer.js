@@ -24,6 +24,7 @@ export default function reducer(state = initialState, action) {
     switch(action.type) {
         case GET_PARENT_INFO + '_FULFILLED':
             return Object.assign({}, state, { parent: action.payload })
+        
         default:
             return state;
     }

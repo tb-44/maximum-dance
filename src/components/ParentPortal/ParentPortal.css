@@ -15,7 +15,7 @@
 .central-login{
     box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
     border-radius: 8px;
-    background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2));
+    /* background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2)); */
     padding: 60px;
     min-width: 500px;
     display: flex;
@@ -30,18 +30,24 @@
   align-items:center;
   justify-content:center;
 }
-.logo{
-  margin-top: 10px;
+
+.big_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
+
 .parent-portal {
-  font-family: 'Open Sans';
-  font-size: 80px;
+  font-family: 'Orbitron';
+  font-size: 50px;
   font-weight: bold;
 }
-.login-button-container {
+/* .login-button-container {
 
 
-}
+} */
 
 .login-button {
 	color: #fff;

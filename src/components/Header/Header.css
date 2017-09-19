@@ -1,50 +1,79 @@
-/* .main_header {
-  display: flex block;
-  justify-content: space-between;
-  box-shadow: rgb(136,136,136);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+ 
+ .Header_parent_container {
+  width: 100%; 
+  height: 100%;
+  box-shadow: 0 6px 6px 0 lightgray, 0 6px 6px 0 #F4BEBC; 
+  /* background: url("http://nativecouncil.org/wp-content/uploads/2015/03/minimal-background-pattern-wordpress-1.jpg"); */
+  border-bottom: 3px solid #625454;
+  font-family: Lato, sans-serif;
+  color: #A5656D;
+}
+
+ .Header_child_left {
+  display: flex;  
+  padding-left: 40px;
+}
+
+ .Header_child_right  {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
   width: 100%;
-  padding: 10px;
-  background-image: linear-gradient(-90deg, #414149 0%, #26262E 100%);
-  background: #ccc;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  height: 45px;
-  
+  text-decoration: none;
+  color: #A5656D;
+  font-size: 20px;
+ }
+
+ .home_link {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 20%;
+ }
+
+ .about_link {
+   display: flex;
+   justify-content: space-around;
+   height: 50px;
+   width: 20%;
+ }
+
+.schedule_link {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 20%;
+}
+
+.parent_link {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 20%;
+}
+
+.contact_link {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 20%;
+}
+
+
+
+ /* .mobile_nav{
+  display: flex;
+  justify-content: space-between; 
+  max-width: 100%;
+  list-style: none; 
 
 } */
 
-header {
-  width: 100%;
-  height: 10px;
-  background-color: gray;
-}
-
-a {
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.desktop_nav {
-  display: flex;
-}
-
-.mobile_nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  list-style: none;
-
-}
-.logo {
-  width: 50px;
-  height: 50px;
-  background: black;
-  text-decoration: none;
-}
-
-@media(min-width:750px){
-  .desktop_nav{
+/* @media(min-width:750px){
+  .Header_parent_container{
     display: block;
   }
   .mobile_nav{
@@ -53,20 +82,20 @@ a {
 }
 
 @media(min-width:900px){
-  .desktop_nav{
+  .dHeader_parent_container{
     font-size: 18px;
   }
 }
 
 @media(min-width:1000px){
-  .desktop_nav{
+  .Header_parent_container{
     font-size: 22px;
   }
 }
 
 @media(min-width:1100px){
-  .desktop_nav{
+  .Header_parent_container{
     font-size: 28px;
 
   }
-}
+} */

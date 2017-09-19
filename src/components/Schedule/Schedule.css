@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
  .schedule_container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  
 } 
+
+section.schedule_page {
+    height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 
 .big_calender{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 650px;
-    height: 650px;
+    width: 750px;
+    height: 600px;
+    padding-left: 300px;
+    padding-top: 50px;
 }

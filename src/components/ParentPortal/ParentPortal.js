@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './ParentPortal.css';
 import Header from './../Header/Header';
+import logo from './maximum-dance-logo.png';
 // import axios from 'axios';
-import logo from './Slice.png';
-import imgLogo from './Maximun Dance.png';
+
+
 
 
 class ParentPortal extends Component {
@@ -22,24 +23,22 @@ render() {
 					<div className="login-container">
 
             <div className="parent-portal">
-							Parent Portal
+							<h3>Welcome to the Parent Portal</h3>
             </div>
 						<div className="login-button-container">
 						<div className='App'>
-								<div>
+
+								<div className="big_logo">
                 <img src={logo} alt='logo'/>
 								</div>
+								
 								<div>
-									<img src={imgLogo} alt='imgLogo'/>
-									</div>
-								<div>
-                <a href={process.env.REACT_APP_LOGIN}><button>Login</button></a>
+                <a href={process.env.REACT_APP_LOGIN}><button>Login/Register</button></a>
 								</div>
             </div>
 						</div>
 					</div>
 				</div>
-        {/* <button onClick={this.test}>test</button> */}
 			</div>
 		)
 	}

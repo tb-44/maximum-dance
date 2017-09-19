@@ -40,33 +40,26 @@ class Dashboard extends Component {
 
     return (
 
-       <div id="header"><Header pageTitle="Dashboard"/>
+       <div id="dashboard"><Header pageTitle="Dashboard"/>
         <section className="dashpage">
         
-        
-        <div>
-        <form onSubmit={this._handleSubmit}>
-          <input type="file" onChange={this._handleImageChange} />
-          <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
-        </form>
-        {$imagePreview}
-        </div>
-
         <form onSubmit={this.handleSubmit}>
-        <label>
+        <label className="form">
           First Name:
           <textarea value={this.state.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
         </form>
 
-        //DROP DOWN MENUS
-        <select>
-           <option value="grapefruit">Grapefruit</option>
-          <option value="lime">Lime</option>
-          <option selected value="coconut">Coconut</option>
-          <option value="mango">Mango</option>
-      </select>
+        <div>
+        <form onSubmit={this.handleSubmit}>
+          <input type="file" onChange={this._handleImageChange} />
+          <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
+        </form>
+        {$imagePreview}
+        </div>
+
+
 
 
          <h1>Maximum Dance</h1>
@@ -77,7 +70,12 @@ class Dashboard extends Component {
                  <p>First Name: { this.props.parent ? this.props.parent.firstname : null }</p>
                  <p>Last Name: { this.props.parent ? this.props.parent.lastname : null }</p>
                  <p>Email: { this.props.parent ? this.props.parent.email : null }</p>
-                 <p>ID: { this.props.parent ? this.props.parent.id : null }</p>
+                 {/* <p>ID: { this.props.parent ? this.props.parent.id : null }</p> */}
+                 <p>Address: { this.props.parent ? this.props.parent.address : null }</p>
+                 <p>City: { this.props.parent ? this.props.parent.city : null }</p>
+                 <p>State: { this.props.parent ? this.props.parent.state : null }</p>
+                 <p>Zip: { this.props.parent ? this.props.parent.zip : null }</p>
+                 <p>Phone: { this.props.parent ? this.props.parent.phone : null }</p>
 
              </div>
                  <a href={process.env.REACT_APP_LOGOUT}><button>Logout</button></a>

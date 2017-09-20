@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
-import instructor1 from './JulieCordery.jpg';
+import instructor1 from './instructor1_resized.jpg';
+import instructor2 from './Taralee_resized.jpg';
 // import Bios from './Bios';
 import './About.css';
 
@@ -10,7 +11,7 @@ class About extends Component {
       <div className="Contact">
         <Header />
         
-{/* 
+
         <div className='about_container'>
             <h1>ALL ABOUT US </h1>
             <div className="outer_container">
@@ -37,21 +38,37 @@ class About extends Component {
             <h1>INSTRUCTOR BIOS</h1>
             <div className="outer_container">
               <div className='text_container'>
-                <div className="pics">
-                  <img src={instructor1} alt="" />
-                  <h3>Julie Cordery</h3>
-                  <p> Julie started dancing at the age of 11.  She began dancing because of her twin sister and completely fell in love with the art.
-                  She was trained in jazz, ballet, hip hop, and lyrical. She danced on West Jordan High School's drill team her junior and senior year.
-                  In her first year of college, she was on Salt Lake Community College's dance company.
-                  She later received her associates degree and moved on to receive her bachelors degree from the University of Utah.
-                  She has been teaching dance for 10+ years. She has been teaching jazz technique, flexibility, and dance combinations.
-                  She has also critiqued and cleaned multiple dance routines to get ready for competitions.
-                  She enjoys teaching and helping dancers reach their highest potential.
+                <div id="pics">
+                  <div>
+                  <img src={instructor2} alt="" />
+                  </div>
+                  <div>
+                  <h3>Taralee Lowrance</h3>
+                  </div>
+                  <div>
+                  <br/>
+                  <p> Taralee is the Owner/Director of Maximum Dance which has been in operation since 2001. 
+                    She has had extensive training in Jazz, Hip Hop, Ballet, Modern, and Tap for over 30 years
+                    and trained under the direction of Laura King Spinning, Jennifer Burn Lewis, Jenn Turner, Scott Watts, and Trey Barber.
+                    <br/>
+                  <p>  She is a former professional NBA Utah Jazz Dancer (2001-2002). She was selected as an ambassador dancer for the 2002 Winter Olympics held in Utah.  
+                    Taralee was a member of the Bingham Minerettes Drill Team and has been a High School Drill team instructor. 
+                    She has won numerous awards over the years with her choreography. 
+                    She choreographed for the Utah Jazz Dancers and multiple Drill Teams. 
+                    She was also the technique teacher for Herriman High School Drill Team. </p>
+                    <br/>
+                  <p>She's been a Guest Choreographer/Teacher for numerous dance studios in multiple states.
+                    Most of her dancers have moved on to make their High School Drill Teams, Dance Co., and Cheerleading squads across the Salt Lake valley. Several of her dancers have moved on to Collegiate dance teams and Professional dancing careers. 
+                    She has been a Professional Judge for dance competitions and also beauty pageants in the Utah Miss America Circuit.
+                    Taralee is passionate about dance and sharing her talents and love with her students. </p>
+                    <p>She also has a wonderful husband and three beautiful kids that she loves spending time with when she isn't busy with her Dancers!</p>
                 </p>
+                </div>
+                
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
 
 
 

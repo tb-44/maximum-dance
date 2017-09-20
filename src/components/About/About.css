@@ -51,6 +51,13 @@
     text-align: center;
   }
 
+  #pics {
+    box-shadow: 6px 6px 40px -2px #999; 
+    width: 75%;
+    display: flex;
+    justify-content: center;
+  }
+
 
   .dance_list {
     text-align: center;

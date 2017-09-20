@@ -10,7 +10,7 @@ class About extends Component {
       <div className="Contact">
         <Header />
         
-
+{/* 
         <div className='about_container'>
             <h1>ALL ABOUT US </h1>
             <div className="outer_container">
@@ -51,7 +51,7 @@ class About extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
 
 

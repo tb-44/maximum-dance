@@ -9,8 +9,7 @@ class Dashboard extends Component {
     super(props);
 
     this.state = {
-      value: '',
-      imagePreviewUrl: ''
+      value: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -32,35 +31,88 @@ class Dashboard extends Component {
 
   render() {
 
-    let { imagePreviewUrl } = this.state;
-    let $imagePreview = null;
-    if (imagePreviewUrl ) {
-      $imagePreview = ( <img src={imagePreviewUrl} alt="" /> );
-    }
-
     return (
 
        <div id="dashboard"><Header pageTitle="Dashboard"/>
         <section className="dashpage">
+
+          <h1>Welcome to your Dashboard</h1>
+          <p>First Name: { this.props.parent ? this.props.parent.firstname : null }</p>
         
-        <form onSubmit={this.handleSubmit}>
+        
+        {/* <form onSubmit={this.handleSubmit}>
         <label className="form">
           First Name:
-          <textarea value={this.state.value} onChange={this.handleChange} />
+          <input value={this.state.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
-        </form>
+        </form> */}
 
-        <div>
+        {/* <div>
         <form onSubmit={this.handleSubmit}>
           <input type="file" onChange={this._handleImageChange} />
           <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
         </form>
         {$imagePreview}
-        </div>
+        </div> */}
 
 
+        <div id="profile-form">
+				<p>{this.props.error}</p>
 
+	
+				<form className='react-form'>
+
+					<fieldset className='form-group'>
+						<label >First Name:</label>
+
+						<input id='formFirstName' className='form-input' name='first_name' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.firstname} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Last Name:</label>
+
+						<input id='formLastName' className='form-input' name='last_name' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.lastname} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Email:</label>
+
+						<input id='formEmail' className='form-input' name='email' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.email} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Address:</label>
+
+						<input id='formAddress' className='form-input' name='address' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.address} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>city:</label>
+
+						<input id='formCity' className='form-input' name='city' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.city} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>State:</label>
+
+						<input id='formState' className='form-input' name='state' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.state} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Zip:</label>
+
+						<input id='formZip' className='form-input' name='zip' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.zip} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Phone:</label>
+
+						<input id='formPhone' className='form-input' name='phone' type='text' onChange={(e) => this.props.handleChange(e)} value={this.props.phone} />
+					</fieldset>
+
+				</form>
+			</div>
 
          <h1>Maximum Dance</h1>
          <div className='parentContainer'>
@@ -70,7 +122,6 @@ class Dashboard extends Component {
                  <p>First Name: { this.props.parent ? this.props.parent.firstname : null }</p>
                  <p>Last Name: { this.props.parent ? this.props.parent.lastname : null }</p>
                  <p>Email: { this.props.parent ? this.props.parent.email : null }</p>
-                 {/* <p>ID: { this.props.parent ? this.props.parent.id : null }</p> */}
                  <p>Address: { this.props.parent ? this.props.parent.address : null }</p>
                  <p>City: { this.props.parent ? this.props.parent.city : null }</p>
                  <p>State: { this.props.parent ? this.props.parent.state : null }</p>

@@ -1,8 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 
- body{
-     /* background-image: url("https://i.pinimg.com/originals/88/01/d8/8801d84a77e9235515a927436f9877df.jpg"); */
-    /*background-image: linear-gradient(99deg, #FF70A6, #ff9770 40%, #ffd670 73%, #e9ff70);*/
+ body {
+    /* background-image: linear-gradient(99deg, #958B8B, #B1AAAA 40%, #DCBDBF 73%, #D6C1C2); */
 } 
 .main-container{
   display: flex;
@@ -10,6 +9,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  font-family: Berkshire Swash, cursive;
 
 }
 .central-login{
@@ -22,6 +22,7 @@
     color: black;
     justify-content: center;
     align-items: center;
+    font-family: Berkshire Swash, cursive;
 
 }
 .login-container{
@@ -52,8 +53,8 @@
 .login-button {
 	color: #fff;
 	background-color: #403d39;
-	/* background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
-	box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2); */
+	background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
+	box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2);
 	border-radius: 4px;
 	padding: 5px 20px;
 	border: none;

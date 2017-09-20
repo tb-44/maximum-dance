@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -21,7 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-  font: Lato, sans-serif;
+  font: Roboto, sans-serif;
   vertical-align: baseline;
   text-decoration: none;
 }
@@ -79,6 +79,6 @@ time, mark, audio, video {
   }
   
   a:hover {
-    background-color: #A5656D;
+    background-color: #F4BEBC;
   }
   

@@ -17,7 +17,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
-//MIDDLEWARE
+//MIDDLEWARE USING PASSPORT
 app.use( passport.initialize() );
 app.use( passport.session() );
 
@@ -36,12 +36,11 @@ passport.use(new Auth0Strategy({
     
   const db = app.get('db');
   db.find_parent(profile.id).then( user => {
-    console.log(user);
     if(user[0]) {
       return done(null, user);
     } else {
       db.create_parent([profile.id, profile.name.givenName, profile.name.familyName, profile.emails[0].value,
-      profile.picture]).then(user => {
+      profile.picture]).then( user => {
         return done(null, user);
       })
     }
@@ -63,11 +62,10 @@ passport.deserializeUser(function(user, done){
   done(null, user);
 });
 
-//SET UP OUR AUTH ENDPOINTS 
-//ENDPOINT #1
+//ENDPOINT #1 - AUTH0
 app.get('/auth', passport.authenticate('auth0', {
   successRedirect: 'http://localhost:3000/#/dashboard',
-  failureRedirect: 'http://localhost:3000/#/'
+  failureRedirect: 'http://localhost:3000/#/parentportal'
 }));
 
 //ENDPOINT #2
@@ -93,6 +91,12 @@ app.get('/auth/logout', (req, res) => {
   return res.redirect(302, 'http://localhost:3000/#/'); //res.redirect comes from express to redirect user to the given url
     //302 is the status code for redirect
 })
+
+////
+//PARENT AND DANCER ENDPOINTS --- NEED TO REVISE TO WORK FOR EACH DATA TO BE RECEIVED FROM DATABASE
+// app.post('/db/create_parent', controller.createParent);
+// app.post('/db/create_dancer', controller.createDancer);
+
 
 let PORT = 3005;
 app.listen(PORT, () => {

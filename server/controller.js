@@ -1,12 +1,13 @@
 module.exports = {
     //create a parent and send to database from dashboard
     createParent: (req, res) => {
+       
         const dbInstance = req.app.get('db');
         const {firstName, lastName, email, phone, address, city, state, zip} = req.body;
-        //NEED TO REVISE FOR PARENTS ENDPOINTS
-        dbInstance.createParent(firstname, lastname, email, phone, address, city, state, zip)
-        .then(parents => res.status(200).send(parents))
-        .catch(err => {res.status(500).send()})
+
+        dbInstance.create_parent([firstName, lastName, email, phone, address, city, state, zip])
+            .then(parents => res.status(200).send(parents))
+            .catch(err => {res.status(500).send()})
     },
 
     //parent to input dancer info to send to the database from dashboard

@@ -6,10 +6,13 @@ const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const massive = require('massive');
 const session = require('express-session');
+const controller = require('./controller');
+const cors = require('cors');
 
 const app = express();
 app.use( bodyParser.json() );
 app.use( express.static( `${__dirname}/../public/build` ) );
+app.use(cors());
 
 app.use(session({
   secret: process.env.SECRET,
@@ -47,7 +50,7 @@ passport.use(new Auth0Strategy({
   })
 }));
 
-//THIS IS INVOKED ONE TIME TO SET UP
+//THIS IS INVOKED ONE TIME TO SET UP SERIALIZE USER
 passport.serializeUser(function(user, done) {
   console.log('serial: ', user);
   done(null, user[0]);
@@ -56,28 +59,17 @@ passport.serializeUser(function(user, done) {
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(user, done){
   console.log('deserial: ', user);
-  // app.get('db').find_session_parent(user[0].id).then(user => {
-  //   return done(null, user[0]);
-  // })
   done(null, user);
 });
 
-//ENDPOINT #1 - AUTH0
+//ENDPOINT - AUTH0
 app.get('/auth', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/dashboard',
-  failureRedirect: 'http://localhost:3000/#/parentportal'
+  successRedirect: 'http://localhost:3000/#/dashboard',  //direct to dashboard for parents
+  failureRedirect: 'http://localhost:3000/#/parentportal' //redirect to parent portal (login page)
 }));
 
-//ENDPOINT #2
-// app.get('/auth/callback', passport.authenticate('auth0', {
-//   successRedirect: '/',
-//   failureRedirect: '/#/parentportal'
-// }));
-
-//ENDPOINT #3
+//ENDPOINT (Login)
 app.get('/auth/me', (req, res) => {
-  console.log(req.session)
-  console.log(req.user);
   if(!req.user) {
     return res.status(404).send('User not found')
   } else {
@@ -85,18 +77,16 @@ app.get('/auth/me', (req, res) => {
   }
 });
 
-//ENDPOINT #4 (Logout)
+//ENDPOINT (Logout)
 app.get('/auth/logout', (req, res) => {
   req.logout() //PASSPORT GIVES US THIS TO TERMINATE A LOGIN SESSION
   return res.redirect(302, 'http://localhost:3000/#/'); //res.redirect comes from express to redirect user to the given url
     //302 is the status code for redirect
 })
 
-////
 //PARENT AND DANCER ENDPOINTS --- NEED TO REVISE TO WORK FOR EACH DATA TO BE RECEIVED FROM DATABASE
-// app.post('/db/create_parent', controller.createParent);
+app.post('/api/create_parent', controller.createParent);
 // app.post('/db/create_dancer', controller.createDancer);
-
 
 let PORT = 3005;
 app.listen(PORT, () => {

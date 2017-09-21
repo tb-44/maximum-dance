@@ -22,7 +22,7 @@ export function getParentInfo() {
 }
 
 export function addParentInfo(obj){
-    const newParentInfo = axios.post('db', obj).then( res => {
+    const newParentInfo = axios.post('http://localhost:3005/api/create_parent', obj).then( res => {
         return res.data
     })
     return {
@@ -34,6 +34,8 @@ export function addParentInfo(obj){
 //REDUCER FUNCTION
 export default function reducer(state = initialState, action) {
     switch(action.type) {
+        case GET_PARENT_INFO + '_PENDING':
+            return state;
         case GET_PARENT_INFO + '_FULFILLED':
             return Object.assign({}, state, { parent: action.payload });
 

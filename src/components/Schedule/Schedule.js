@@ -14,10 +14,10 @@ class Schedule extends Component {
     return (
 
       <div className="schedule_container">
-        <div className="header">
-          <div>
+      
           <Header />
-          </div>
+        
+
       <section className="schedule_page">
         <div>
           This is the Schedule Page
@@ -32,7 +32,7 @@ class Schedule extends Component {
             endAccessor='endDate' />
         </div>
         </section>
-        </div>
+        
       </div>
     );
   }

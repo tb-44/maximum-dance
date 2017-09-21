@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
-import instructor1 from './instructor1_resized.jpg';
+// import instructor1 from './instructor1_resized.jpg';
 import instructor2 from './Taralee_resized.jpg';
 // import Bios from './Bios';
 import './About.css';

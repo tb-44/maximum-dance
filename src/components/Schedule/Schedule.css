@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
  .schedule_container {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100%;
+  width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +21,8 @@ section.schedule_page {
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 750px;
-    height: 600px;
+    /* width: 750px;
+    height: 600px; */
     padding-left: 300px;
     padding-top: 50px;
 }

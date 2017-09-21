@@ -10,18 +10,43 @@ class Dashboard extends Component {
     super(props);
 
     this.state = {
-      parent: [],
-      value: ''
+      firstname: '',
+      lastname: '',
+      address: '',
+      city: '',
+      state: '',
+      zip: '',
+      phone: '',
+      email: ''
     }
-
-    this.handleChange = this.handleChange.bind(this);
+    this.addNewParent = this.addNewParent.bind(this);
+    this.handleParentInfo = this.handleParentInfo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    axios.post('http://localhost:3005/api/').then(res => {
+      this.setState({
+        parents: res.data
+      })
+      console.log(this.state.parents)
+    }) 
   }
 
   // componentDidMount(){
     // this.props.getParentInfo()
 
-    componentDidMount() {
+    addNewParent() {
+      var parents = {
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        address: this.state.address,
+        city: this.state.city,
+        state: this.state.state,
+        zip: this.state.zip,
+        phone: this.state.phone,
+        email: this.state.email
+      }
       axios.post('http://localhost:3005/api/parent').then(res => {
         console.log(res.data)
         this.setState({
@@ -32,9 +57,8 @@ class Dashboard extends Component {
       })
   }
 
-  handleChange(e) {
+  handleParentInfo(e) {
     this.setState({
-
       firstname: e.target.value,
       lastname: e.target.value,
       address: e.target.value,
@@ -56,12 +80,12 @@ class Dashboard extends Component {
 
        <div id="dashboard"><Header pageTitle="Dashboard"/>
         <section className="dashpage">
-{/* 
+
         <br/>
           <h1>Welcome to your Maximum Dance Dashboard: </h1> 
           <h1>{ this.props.parent ? this.props.parent.firstname : null }</h1>
           <h1>{ this.props.parent ? this.props.parent.lastname : null }</h1>
-        <br/> */}
+        <br/> 
         
 
         <div id="profile-form">
@@ -71,57 +95,57 @@ class Dashboard extends Component {
 					<fieldset className='form-group'>
 						<label >First Name:</label>
 
-						<input id='formFirstName' className='form-input' name='firstname' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.firstname} />
+						<input id='formFirstName' className='form-input' type='text' 
+            onChange={this.handleParentInfo} value={this.state.firstname} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Last Name:</label>
 
-						<input id='formLastName' className='form-input' name='lastname' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.lastname} />
+						<input id='formLastName' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.lastname} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Email:</label>
 
-						<input id='formEmail' className='form-input' name='email' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.email} />
+						<input id='formEmail' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.email} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Address:</label>
 
-						<input id='formAddress' className='form-input' name='address' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.address} />
+						<input id='formAddress' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.address} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>city:</label>
 
-						<input id='formCity' className='form-input' name='city' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.city} />
+						<input id='formCity' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.city} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>State:</label>
 
-						<input id='formState' className='form-input' name='state' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.state} />
+						<input id='formState' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.state} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Zip:</label>
 
-						<input id='formZip' className='form-input' name='zip' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.zip} />
+						<input id='formZip' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.zip} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Phone:</label>
 
-						<input id='formPhone' className='form-input' name='phone' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.phone} />
+						<input id='formPhone' className='form-input' type='text' 
+            onChange={(e) => this.state.handleParentInfo(e)} value={this.state.phone} />
 					</fieldset>
 
 				</form>

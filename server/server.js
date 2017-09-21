@@ -86,7 +86,7 @@ app.get('/auth/logout', (req, res) => {
 
 //PARENT AND DANCER ENDPOINTS --- NEED TO REVISE TO WORK FOR EACH DATA TO BE RECEIVED FROM DATABASE
 app.post('/api/create_parent', controller.createParent);
-// app.post('/db/create_dancer', controller.createDancer);
+app.post('/db/create_dancer', controller.createDancer);
 
 let PORT = 3005;
 app.listen(PORT, () => {

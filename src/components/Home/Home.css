@@ -31,11 +31,12 @@
   height: auto;
 }
 
- .logo{
+ button.logo {
   z-index: 100;
   position: fixed;
-  padding-top: 55px;
+  padding-top: 65px;
   padding-left: 15px;
+  background-color: #F4BEBC;
  }
 
 @media (min-aspect-ratio: 16/9) {

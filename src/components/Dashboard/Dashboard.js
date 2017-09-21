@@ -10,7 +10,6 @@ class Dashboard extends Component {
 
     this.state = {
 
-      value: '',
       firstName: '',
       lastName: '',
       email: '',
@@ -19,7 +18,7 @@ class Dashboard extends Component {
       state: '',
       zip: '',
       phone: ''
-      
+
     }
 
     this.handleChange = this.handleChange.bind( this );
@@ -60,7 +59,7 @@ class Dashboard extends Component {
 				  <form className='react-form'>
 
 					<fieldset className='form-group'>
-            <p>All fields are required</p>
+            <p>All fields are required for Registration below</p>
 						<label >First Name:</label>
 
 						<input id='formFirstName' className='form-input' name="name" type='text' 

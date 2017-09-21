@@ -38,19 +38,19 @@ passport.use(new Auth0Strategy({
 }, function(accessToken, refreshToken, extraParams, profile, done){
     
   const db = app.get('db');
-  db.find_parent(profile.id).then( user => {
+  db.find_parent(profile.email).then( user => {
     if(user[0]) {
       return done(null, user);
     } else {
-      db.create_parent([profile.id, profile.name.givenName, profile.name.familyName, profile.emails[0].value,
-      profile.picture]).then( user => {
+      db.create_parent([profile.name.givenName, profile.name.familyName, profile.emails[0].value,
+      profile.phone, profile.address, profile.city, profile.state, profile.zip]).then( user => {
         return done(null, user);
       })
     }
   })
 }));
 
-//THIS IS INVOKED ONE TIME TO SET UP SERIALIZE USER
+//THIS IS INVOKED ONE TIME TO SET UP
 passport.serializeUser(function(user, done) {
   console.log('serial: ', user);
   done(null, user[0]);
@@ -59,14 +59,23 @@ passport.serializeUser(function(user, done) {
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(user, done){
   console.log('deserial: ', user);
+  // app.get('db').find_session_parent(user[0].id).then(user => {
+  //   return done(null, user[0]);
+  // })
   done(null, user);
 });
 
-//ENDPOINT - AUTH0
+//ENDPOINT #1 - AUTH0
 app.get('/auth', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/dashboard',  //direct to dashboard for parents
-  failureRedirect: 'http://localhost:3000/#/parentportal' //redirect to parent portal (login page)
+  successRedirect: 'http://localhost:3000/#/dashboard',
+  failureRedirect: 'http://localhost:3000/#/parentportal'
 }));
+
+//ENDPOINT #2
+// app.get('/auth/callback', passport.authenticate('auth0', {
+//   successRedirect: '/',
+//   failureRedirect: '/#/parentportal'
+// }));
 
 //ENDPOINT (Login)
 app.get('/auth/me', (req, res) => {
@@ -86,7 +95,8 @@ app.get('/auth/logout', (req, res) => {
 
 //PARENT AND DANCER ENDPOINTS --- NEED TO REVISE TO WORK FOR EACH DATA TO BE RECEIVED FROM DATABASE
 app.post('/api/create_parent', controller.createParent);
-app.post('/db/create_dancer', controller.createDancer);
+// app.post('/db/create_dancer', controller.createDancer);
+
 
 let PORT = 3005;
 app.listen(PORT, () => {

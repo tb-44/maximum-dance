@@ -1,3 +1,3 @@
 SELECT *
 FROM parents
-WHERE auth_id = $1;
+WHERE email = $1;

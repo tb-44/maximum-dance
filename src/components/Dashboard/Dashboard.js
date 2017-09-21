@@ -25,7 +25,6 @@ class Dashboard extends Component {
     this.handleSubmit = this.handleSubmit.bind( this );
   }
 
-
   componentDidMount(){
     this.props.getParentInfo();
   }
@@ -34,9 +33,8 @@ class Dashboard extends Component {
      this.setState({
        [inputName]: e.target.value
      });
-     console.log(this.state);
+    //  console.log(this.state);
    }
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -119,6 +117,48 @@ class Dashboard extends Component {
 
 				</form>
 			</div>
+
+
+
+
+      {/* <div id="profile-form">
+				  <form className='react-form'>
+
+					<fieldset className='form-group'>
+            <p>All fields are required for Registration of your dancer</p>
+						<label >First Name:</label>
+
+						<input id='formFirstName' className='form-input' name="name" type='text' 
+            onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Last Name:</label>
+
+						<input id='formLastName' className='form-input' name="name" type='text' 
+            onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Class:</label>
+
+						<input id='formAddress' className='form-input' name="address" type='text' 
+            onChange={ (e) => this.handleChange(e, "classname") } value={this.state.classname} />
+					</fieldset>
+
+					<fieldset className='form-group'>
+						<label>Age:</label>
+
+						<input id='formCity' className='form-input' name="city" type='text' 
+            onChange={ (e) => this.handleChange(e, "age") } value={this.state.age} />
+					</fieldset>
+
+          <button className="submit-button-dancer" onClick={ () => this.props.addDancerInfo(this.state) } >Submit</button>
+
+				</form>
+			</div> */}
+
+
 
 
          <h1>Maximum Dance</h1>

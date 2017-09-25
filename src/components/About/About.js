@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
-// import instructor1 from './instructor1_resized.jpg';
-import instructor2 from '.././img/Taralee_resized.jpg';
+import instructor1 from '.././img/Taralee_resized.jpg';
 // import Bios from './Bios';
 import './About.css';
 
@@ -10,24 +9,21 @@ class About extends Component {
     return (
       <div className="About-main-container">
         <Header/>
-    
-          <div className="title-about">
-            <h1>ALL ABOUT US </h1>
-            
-           
-              <div className='text_container'>
-                <p>Maximum Dance has been in operation for 16 years.
-                  Maximum Dance is a healthy environment where your dancer will learn and grow in the art of Dance.
-                  Maximum Dance  is offering classes in the following styles: 
-                  Jazz, Ballet, Hip hop, Technique, Turns, and Combo classes.
-                  Come be apart of our amazing Competition teams or just come take class. 
-                  At Maximum we believe Dancing is the closest thing to Magic. Register today! 
-                  We are currently operating in Riverton.
-                </p>
 
-              </div>
-            </div>
-          
+      <section>
+        <div className="about_us_container">
+          <div className="flex-about1">ALL ABOUT US</div>
+          <div className="flex-about2">
+            Maximum Dance has been in operation for 16 years.
+            Maximum Dance is a healthy environment where your dancer will learn and grow in the art of Dance.
+            Maximum Dance  is offering classes in the following styles: 
+            Jazz, Ballet, Hip hop, Technique, Turns, and Combo classes.
+            Come be a part of our amazing Competition teams or just come take class. 
+            At Maximum we believe Dancing is the closest thing to Magic. Register today! 
+            We are operating in our Riverton studio.
+          </div>
+        </div>
+      </section> 
 
           <div className='bio-main-container'>
             <h1>INSTRUCTOR BIOS</h1>
@@ -35,7 +31,7 @@ class About extends Component {
               <div className='bio-text_container'>
                 <div id="pic">
                   <div>
-                  <img src={instructor2} alt="" />
+                  <img src={instructor1} alt="" />
                   
                   </div>
                   <div>

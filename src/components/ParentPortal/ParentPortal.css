@@ -41,14 +41,10 @@
 }
 
 .parent-portal {
-  font-family: 'Orbitron';
-  font-size: 50px;
+  /* font-family: 'Orbitron'; */
+  font-size: 30px;
   font-weight: bold;
 }
-/* .login-button-container {
-
-
-} */
 
 .login-button {
 	color: #fff;

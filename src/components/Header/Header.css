@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette');
- 
- .header-container {
-   margin: auto;
-   border-bottom: 1px solid black;
-   box-shadow: 6px 6px 20px -4px #999; 
-   border-bottom: 3px solid #625454;
-   color: #A5656D
 
+.header-container {
+   margin: auto;
+   border-bottom: 1px solid #625454;
+   box-shadow: 6px 6px 20px -4px #999; 
+   border-bottom: 3px solid #2B2525;
+   color: #A5656D
  }
 
  #main-header {
    border-bottom: 1px solid black;
-   /* background: url('./wall-plant-r3.jpg') */
+   background: url('./pattern.png');
  }
 
  #navbar {
@@ -27,21 +25,21 @@
 
  #navbar a {
    text-decoration: none;
-   color:  gray;
+   color:  #625454;
  }
 
  #navbar.li.current a, #navbar a:hover {
-    color: pink;
-    border-bottom: 3px solid gray;
+    color: #F4BEBC;
+    border-bottom: 3px solid #625454;
  }
 
  .Header_child_right  {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 100%;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  max-width: 100%;
   text-decoration: none;
   font-size: 20px;
  } 

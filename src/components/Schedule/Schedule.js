@@ -6,6 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './Schedule.css';
 
 class Schedule extends Component {
+  
   render() {
 
     BigCalendar.momentLocalizer(moment);

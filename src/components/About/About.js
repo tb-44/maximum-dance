@@ -1,64 +1,61 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
 // import instructor1 from './instructor1_resized.jpg';
-import instructor2 from './Taralee_resized.jpg';
+import instructor2 from '.././img/Taralee_resized.jpg';
 // import Bios from './Bios';
 import './About.css';
 
 class About extends Component {
   render() {
     return (
-      <div className="Contact">
-        <Header />
-        
-
-        <div className='about_container'>
+      <div className="About-main-container">
+        <Header/>
+    
+          <div className="title-about">
             <h1>ALL ABOUT US </h1>
-            <div className="outer_container">
+            
+           
               <div className='text_container'>
-
                 <p>Maximum Dance has been in operation for 16 years.
                   Maximum Dance is a healthy environment where your dancer will learn and grow in the art of Dance.
-                  Maximum Dance  is offering classes in the following styles: Jazz, Ballet, Hip hop, Technique, Turns, and Combo classes.
+                  Maximum Dance  is offering classes in the following styles: 
+                  Jazz, Ballet, Hip hop, Technique, Turns, and Combo classes.
                   Come be apart of our amazing Competition teams or just come take class. 
                   At Maximum we believe Dancing is the closest thing to Magic. Register today! 
                   We are currently operating in Riverton.
                 </p>
 
               </div>
-
-              <div className='list_container'>
-              </div>
             </div>
-          </div>
+          
 
-
-
-          <div className='about_container'>
+          <div className='bio-main-container'>
             <h1>INSTRUCTOR BIOS</h1>
-            <div className="outer_container">
-              <div className='text_container'>
-                <div id="pics">
+            <div className="bio-outer_container">
+              <div className='bio-text_container'>
+                <div id="pic">
                   <div>
                   <img src={instructor2} alt="" />
+                  
                   </div>
                   <div>
                   <h3>Taralee Lowrance</h3>
                   </div>
                   <div>
                   <br/>
-                  <p> Taralee is the Owner/Director of Maximum Dance which has been in operation since 2001. 
+                  <p>Taralee is the Owner/Director of Maximum Dance which has been in operation since 2001. 
                     She has had extensive training in Jazz, Hip Hop, Ballet, Modern, and Tap for over 30 years
                     and trained under the direction of Laura King Spinning, Jennifer Burn Lewis, Jenn Turner, Scott Watts, and Trey Barber.
                     <br/>
-                  <p>  She is a former professional NBA Utah Jazz Dancer (2001-2002). She was selected as an ambassador dancer for the 2002 Winter Olympics held in Utah.  
+                  <p>She is a former professional NBA Utah Jazz Dancer (2001-2002). She was selected as an ambassador dancer for the 2002 Winter Olympics held in Utah.  
                     Taralee was a member of the Bingham Minerettes Drill Team and has been a High School Drill team instructor. 
                     She has won numerous awards over the years with her choreography. 
                     She choreographed for the Utah Jazz Dancers and multiple Drill Teams. 
                     She was also the technique teacher for Herriman High School Drill Team. </p>
                     <br/>
                   <p>She's been a Guest Choreographer/Teacher for numerous dance studios in multiple states.
-                    Most of her dancers have moved on to make their High School Drill Teams, Dance Co., and Cheerleading squads across the Salt Lake valley. Several of her dancers have moved on to Collegiate dance teams and Professional dancing careers. 
+                    Most of her dancers move on to make their High School Drill Teams, Dance Co., and Cheerleading squads across the Salt Lake valley. 
+                    Several have moved on to Collegiate dance teams and Professional dancing careers. 
                     She has been a Professional Judge for dance competitions and also beauty pageants in the Utah Miss America Circuit.
                     Taralee is passionate about dance and sharing her talents and love with her students. </p>
                     <p>She also has a wonderful husband and three beautiful kids that she loves spending time with when she isn't busy with her Dancers!</p>
@@ -98,7 +95,7 @@ class About extends Component {
         <section className="section content">
           <div className="container">
 
-            <h2>DANCE INSTRUCTOR BIOS</h2>
+            {/* <h2>DANCE INSTRUCTOR BIOS</h2> */}
             
           </div>
         </section>

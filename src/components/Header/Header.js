@@ -5,37 +5,32 @@ import './Header.css';
 
 class Header extends Component {
 
+
   render() {
     return (
 
-      <div className="Header_parent_container">
+      <header id="main-header">
         
-        <div className="Header_child_left">
-          <img src={headerLogo} alt="" />
-
-          <div className="Header_child_right">
-            <div className="home_link">
-              <Link to="/">Home</Link>
+        <div className="header-container">
+          <div className="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+              <img src={headerLogo} alt="" />
             </div>
 
-            <div className="about_link">
-              <Link to="/about">About</Link>
-            </div>
-
-            <div className="schedule_link">
-              <Link to="/schedule">Schedule</Link>
-            </div>
-
-            <div className="parent_link">
-              <Link to="/parentportal">Parent Portal</Link>
-            </div>
-
-            <div className="contact_link">
-              <Link to="/contact">Contact</Link></div>
+          <div className="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            <nav id="navbar">
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/schedule">Schedule</Link></li>
+                <li><Link to="/parentportal">Parents</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+              </ul>
+            </nav>
           </div>
-
-        </div>
-      </div>
+          </div>
+          </div>
+      </header>
     );
   }
 }

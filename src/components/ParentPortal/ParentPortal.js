@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ParentPortal.css';
 import Header from './../Header/Header';
-import logo from './maximum-dance-logo.png';
+// import logo from './maximum-dance-logo.png';
 
 class ParentPortal extends Component {
 

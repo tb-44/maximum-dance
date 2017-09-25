@@ -29,12 +29,15 @@ class Home extends Component {
 		})
 	}
 
+
+
 	render() {
+
 		return (
 			<div className="main-container">
 
 				<div className="fullscreen-bg">
-
+				
 					<button className="logo" onClick={() => this.toggleMenu()}>
 						<img src={svg} alt="" /></button>
 

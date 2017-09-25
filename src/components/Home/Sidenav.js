@@ -14,7 +14,7 @@ export default class Sidenav extends Component {
                 <ul>
                     <a><Link to='/about' className="home" onClick={() => this.props.toggleSubMenu()}>About</Link></a>
                     <a><Link to='/schedule' className="home">Schedule</Link></a>
-                    <a><Link to='/parentportal' className="home">Parent Portal</Link></a>
+                    <a><Link to='/parentportal' className="home">Parents</Link></a>
                     <a><Link to='/contact' className="home">Contact</Link></a>
                 </ul>
             </div>

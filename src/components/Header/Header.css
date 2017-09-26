@@ -9,7 +9,6 @@
   border-bottom: 1px solid #625454;
   box-shadow: 6px 6px 20px -4px #999; 
   border-bottom: 3px solid #2B2525;
-  max-width: 100%;
  }
 
  .header-logo {
@@ -21,7 +20,6 @@
  #navbar {
    display: flex;
    max-width: 100%;
-   
  }
 
  #navbar ul {

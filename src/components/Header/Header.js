@@ -10,9 +10,10 @@ class Header extends Component {
 
       <header id="main-header">
         <div className="header-container">
+          
           <div className="header-logo">
           <img src={headerLogo} alt="" />
-            </div>
+          </div>
             
             <nav id="navbar">
               <ul>
@@ -23,7 +24,7 @@ class Header extends Component {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-            </div>
+        </div>
       </header>
     );
   }

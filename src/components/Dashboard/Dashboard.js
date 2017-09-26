@@ -9,7 +9,6 @@ class Dashboard extends Component {
     super(props);
 
     this.state = {
-
       firstName: '',
       lastName: '',
       email: '',
@@ -18,9 +17,8 @@ class Dashboard extends Component {
       state: '',
       zip: '',
       phone: ''
-
     }
-
+    
     this.handleChange = this.handleChange.bind( this );
     this.handleSubmit = this.handleSubmit.bind( this );
   }
@@ -33,7 +31,6 @@ class Dashboard extends Component {
      this.setState({
        [inputName]: e.target.value
      });
-    //  console.log(this.state);
    }
 
   handleSubmit(e) {
@@ -43,70 +40,70 @@ class Dashboard extends Component {
   render() {
     return (
 
-       <div id="dashboard"><Header pageTitle="Dashboard"/>
+       <div id="dashboard">
+         <Header />
         <section className="dashpage">
 
-        {/* <br/>
+        {/* <div className="welcome-container">
           <h1>Welcome to your Maximum Dance Dashboard: </h1> 
           <h1>{ this.props.parent ? this.props.parent.firstname : null }</h1>
           <h1>{ this.props.parent ? this.props.parent.lastname : null }</h1>
-        <br/>  */}
+        </div>  */}
         
+        <div id="parent-form">
+				  <form className='parent_form'>
 
-        <div id="profile-form">
-				  <form className='react-form'>
-
-					<fieldset className='form-group'>
-            <p>All fields are required for Registration below</p>
+					<fieldset className='form-parents'>
+            <p>*All fields are required for Parent Registration below</p>
 						<label >First Name:</label>
 
 						<input id='formFirstName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Last Name:</label>
 
 						<input id='formLastName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Email:</label>
 
 						<input id='formEmail' className='form-input' name="email" type='text' 
             onChange={ (e) => this.handleChange(e, "email") } value={this.state.email} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Address:</label>
 
 						<input id='formAddress' className='form-input' name="address" type='text' 
             onChange={ (e) => this.handleChange(e, "address") } value={this.state.address} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>city:</label>
 
 						<input id='formCity' className='form-input' name="city" type='text' 
             onChange={ (e) => this.handleChange(e, "city") } value={this.state.city} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>State:</label>
 
 						<input id='formState' className='form-input' name="state" type='text' 
             onChange={ (e) => this.handleChange(e, "state") } value={this.state.state} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Zip:</label>
 
 						<input id='formZip' className='form-input' name="zip" type='text' 
             onChange={ (e) => this.handleChange(e, "zip") } value={this.state.zip} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Phone:</label>
 
 						<input id='formPhone' className='form-input' name="phone" type='text' 
@@ -119,13 +116,11 @@ class Dashboard extends Component {
 			</div>
 
 
+      {/* <div id="parent-form">
+				  <form className='form-parents'>
 
-
-      {/* <div id="profile-form">
-				  <form className='react-form'>
-
-					<fieldset className='form-group'>
-            <p>All fields are required for Registration of your dancer</p>
+					<fieldset className='form-parents'>
+            <p>*All fields are required for Registration of your Dancer</p>
 						<label >First Name:</label>
 
 						<input id='formFirstName' className='form-input' name="name" type='text' 
@@ -159,20 +154,22 @@ class Dashboard extends Component {
 			</div> */}
 
 
+ 
 
-
-         <h1>Maximum Dance</h1>
+         {/* <h1>Maximum Dance</h1> */}
          <div className='parentContainer'>
-             <h4>Parent Information:</h4>
+             {/* <h4>Parent Information:</h4>
                  {this.props.parent ? <img className='avatar' src={this.props.parent.img} alt='' /> : null }
                 
                 <div>
                  <p>First Name: { this.props.parent ? this.props.parent.firstname : null }</p>
                  <p>Last Name: { this.props.parent ? this.props.parent.lastname : null }</p>
-                </div>
+                </div> */}
 
                  <a href={process.env.REACT_APP_LOGOUT}><button>Logout</button></a>
          </div>
+
+
       </section>
 			</div>
     );

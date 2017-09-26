@@ -38,7 +38,7 @@ passport.use(new Auth0Strategy({
 }, function(accessToken, refreshToken, extraParams, profile, done){
     
   const db = app.get('db');
-  db.find_parent(profile.email).then( user => {
+  db.find_parent(profile.id).then( user => {
     if(user[0]) {
       return done(null, user);
     } else {
@@ -65,17 +65,11 @@ passport.deserializeUser(function(user, done){
   done(null, user);
 });
 
-//ENDPOINT #1 - AUTH0
+//ENDPOINT #1 - AUTH0 AUTHENTICATION
 app.get('/auth', passport.authenticate('auth0', {
   successRedirect: 'http://localhost:3000/#/dashboard',
   failureRedirect: 'http://localhost:3000/#/parentportal'
 }));
-
-//ENDPOINT #2
-// app.get('/auth/callback', passport.authenticate('auth0', {
-//   successRedirect: '/',
-//   failureRedirect: '/#/parentportal'
-// }));
 
 //ENDPOINT (Login)
 app.get('/auth/me', (req, res) => {
@@ -93,7 +87,7 @@ app.get('/auth/logout', (req, res) => {
     //302 is the status code for redirect
 })
 
-//PARENT AND DANCER ENDPOINTS --- NEED TO REVISE TO WORK FOR EACH DATA TO BE RECEIVED FROM DATABASE
+//PARENT AND DANCER ENDPOINTS FROM CONTROLLER
 app.post('/api/create_parent', controller.createParent);
 // app.post('/db/create_dancer', controller.createDancer);
 

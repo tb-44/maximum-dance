@@ -17,7 +17,7 @@ class ParentPortal extends Component {
 						</div>
 						<div className="login-button-container">
 
-								<div className="big_logo">
+								<div className="center_logo">
 									<img src={logo} alt='logo' />
 								</div>
 

@@ -55,6 +55,6 @@
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    background: url('https://i.pinimg.com/736x/c3/4a/1c/c34a1ce169d0688174e45ed47f4bdd3b--beach-dance-photography-sunset-photography.jpg') center center / cover no-repeat;
+    /* background: url('https://i.pinimg.com/736x/c3/4a/1c/c34a1ce169d0688174e45ed47f4bdd3b--beach-dance-photography-sunset-photography.jpg') center center / cover no-repeat; */
   }
 } 

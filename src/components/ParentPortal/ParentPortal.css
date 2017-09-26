@@ -1,62 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 
- body {
-    /* background-image: linear-gradient(99deg, #958B8B, #B1AAAA 40%, #DCBDBF 73%, #D6C1C2); */
-} 
-.main-container{
+.main-container{ 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  font-family: Berkshire Swash, cursive;
-
+  max-width: 100%;
+  max-height: 100%;
 }
-.central-login{
-    box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
-    border-radius: 8px;
-    /* background-image: linear-gradient(128deg, rgba(64, 61, 57, 0.1), rgba(255, 255, 255, 0.2)); */
-    padding: 60px;
-    min-width: 500px;
+
+.central-login {
     display: flex;
     color: black;
     justify-content: center;
     align-items: center;
-    font-family: Berkshire Swash, cursive;
-
 }
-.login-container{
+
+.login-container {
   display:flex;
   flex-direction: column;
   align-items:center;
   justify-content:center;
 }
 
-.big_logo {
+.center_logo img {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  
 }
 
 .parent-portal {
-  /* font-family: 'Orbitron'; */
   font-size: 30px;
-  font-weight: bold;
 }
 
 .login-button {
 	color: #fff;
 	background-color: #403d39;
-	background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
+	/* background-color: radial-gradient(circle at 50% - 46%, #737373, #403d39);
 	box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2);
 	border-radius: 4px;
 	padding: 5px 20px;
 	border: none;
 	min-width: 350px;
-	height: 40px;
-
-
+	height: 40px;  */
 }
 

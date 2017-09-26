@@ -9,14 +9,11 @@ class Header extends Component {
     return (
 
       <header id="main-header">
-        
         <div className="header-container">
-          <div className="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
-            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-              <img src={headerLogo} alt="" />
+          <div className="header-logo">
+          <img src={headerLogo} alt="" />
             </div>
-
-          <div className="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            
             <nav id="navbar">
               <ul>
                 <li><Link to="/">Home</Link></li>
@@ -26,9 +23,7 @@ class Header extends Component {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-          </div>
-          </div>
-          </div>
+            </div>
       </header>
     );
   }

@@ -135,7 +135,7 @@ class About extends Component {
           </div>
         </section>
         <section className="section content">
-          <div className="container">
+          <div className="container1">
 
             <h2>OUR MISSION</h2>
             <p>Maxium Dance is fully committed to providing all dancers with an encouraging environment
@@ -152,9 +152,9 @@ class About extends Component {
           </div>
         </section>
         <section className="section content">
-          <div className="container">
+          <div className="container2">
 
-            <h3>"Dancing is the poetry of the foot"</h3>
+            <h3>Dancing Is Like Dreaming with your feet</h3>
             
           </div>
         </section>
@@ -164,7 +164,7 @@ class About extends Component {
           </div>
         </section>
         <section className="section content">
-          <div className="container">
+          <div className="container1">
 
             <h2>DANCE CLASSES AVAILABLE</h2>
             <p>Hip Hop <br />

@@ -179,12 +179,10 @@ class Dashboard extends Component {
   }
 }
 
-
 function mapStateToProps(state){
   return {
     parent: state.parent
   }
 }
-
 
 export default connect( mapStateToProps, { getParentInfo, addParentInfo } )(Dashboard);

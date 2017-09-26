@@ -16,10 +16,8 @@
   left: 0;
   opacity: 0.85;
 }
+
 .fullscreen-bg {
-  /* background: url('maximum-dance-logo-video-overlay.png') center center no-repeat;
-  overflow: hidden;
-  z-index: -100; */
   float: left;
   position: relative;
 }
@@ -55,6 +53,6 @@
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    /* background: url('https://i.pinimg.com/736x/c3/4a/1c/c34a1ce169d0688174e45ed47f4bdd3b--beach-dance-photography-sunset-photography.jpg') center center / cover no-repeat; */
+    background: url('https://i.pinimg.com/736x/15/44/87/154487f8523d2f3d2faf7aacd1fc3d57--dancing-in-the-street-street-dance.jpg') center center / cover no-repeat;
   }
 } 

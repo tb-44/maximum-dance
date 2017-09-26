@@ -32,9 +32,6 @@ handleChange(e) {
   });
 }
 
-
-
-
   render() {
     return (
       <div className="Contact">

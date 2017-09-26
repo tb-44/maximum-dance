@@ -32,9 +32,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="main-container">
-
 				<div className="fullscreen-bg">
-				
 					<button className="logo" onClick={() => this.toggleMenu()}>
 						<img src={svg} alt="" /></button>
 
@@ -43,13 +41,11 @@ class Home extends Component {
 						toggleSubMenu={this.toggleSubMenu}
 						showSubMenu={this.state.showSubMenu} />
 
-
 					<img src={homeIcon} alt='' className="video-overlay" />
 					<video className="fullscreen-bg__video" autoPlay preload loop muted width="650" height="350">
 						<source src={videobkgd} type="video/mp4" />
 						<source src={videobkgd1} type="video/webm" />
 					</video>
-
 				</div>
 			</div>
 		)

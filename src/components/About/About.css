@@ -158,6 +158,19 @@ section {
   section.section.parallax-3 {
     background-image: url('./group.jpeg');
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container2 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   @media all and (min-width: 600px) {
     section.section h2 {

@@ -21,6 +21,7 @@
  #navbar {
    display: flex;
    max-width: 100%;
+   
  }
 
  #navbar ul {
@@ -43,7 +44,7 @@
  }
 
  #navbar.li.current a, #navbar a:hover {
-    color: #F4BEBC;
+    color: #A5656D;
     border-bottom: 3px solid #625454;
  }
 

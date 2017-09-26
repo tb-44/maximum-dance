@@ -38,7 +38,7 @@ passport.use(new Auth0Strategy({
 }, function(accessToken, refreshToken, extraParams, profile, done){
     
   const db = app.get('db');
-  db.find_parent(profile.id).then( user => {
+  db.find_parent(profile.emails[0].value).then( user => {
     if(user[0]) {
       return done(null, user);
     } else {
@@ -52,13 +52,13 @@ passport.use(new Auth0Strategy({
 
 //THIS IS INVOKED ONE TIME TO SET UP
 passport.serializeUser(function(user, done) {
-  console.log('serial: ', user);
+
   done(null, user[0]);
 });
 
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(user, done){
-  console.log('deserial: ', user);
+
   // app.get('db').find_session_parent(user[0].id).then(user => {
   //   return done(null, user[0]);
   // })
@@ -89,7 +89,7 @@ app.get('/auth/logout', (req, res) => {
 
 //PARENT AND DANCER ENDPOINTS FROM CONTROLLER
 app.post('/api/create_parent', controller.createParent);
-// app.post('/db/create_dancer', controller.createDancer);
+app.post('/api/create_dancer/:id', controller.createDancer);
 
 
 let PORT = 3005;

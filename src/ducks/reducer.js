@@ -9,11 +9,11 @@ const initialState = {
 //ACTION TYPES
 const GET_PARENT_INFO = "GET_PARENT_INFO";
 const ADD_PARENT_INFO = "ADD_PARENT_INFO";
-// const ADD_DANCER_INFO = "ADD_DANCER_INFO";
+const ADD_DANCER_INFO = "ADD_DANCER_INFO";
 
 //ACTION CREATORS
 export function getParentInfo() {
-    const parentInfo = axios.get('/auth/me').then( res => {
+    const parentInfo = axios.get('/auth/me').then( res => { 
         return res.data
     })
     return {
@@ -32,15 +32,17 @@ export function addParentInfo(obj){
     }
 }
 
-// export function addDancerInfo(obj){
-//     const newDancerInfo = axios.post('http://localhost:3005/api/create_dancer', obj).then( res => {
-//         return res.data
-//     })
-//     return {
-//         type: ADD_DANCER_INFO,
-//         payload: newDancerInfo
-//     }
-// }
+export function addDancerInfo(obj, id){
+    console.log(obj)
+    console.log(id)
+    const newDancerInfo = axios.post('http://localhost:3005/api/create_dancer/' + 4, obj).then( res => {
+        return res.data
+    })
+    return {
+        type: ADD_DANCER_INFO,
+        payload: obj
+    }
+}
 
 //REDUCER FUNCTION
 export default function reducer(state = initialState, action) {
@@ -55,8 +57,8 @@ export default function reducer(state = initialState, action) {
         case ADD_PARENT_INFO + '_FULFILLED':
             return Object.assign({}, state, { parent: action.payload });
 
-        // case ADD_DANCER_INFO + '_FULFILLED':
-        //     return Object.assign({}, state, { parent: action.payload });
+        case ADD_DANCER_INFO + '_FULFILLED':
+            return Object.assign({}, state, { parent: action.payload });
 
         default:
             return state;

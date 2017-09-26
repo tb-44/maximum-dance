@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getParentInfo, addParentInfo } from '../../ducks/reducer';
 import Header from './../Header/Header';
 import './Dashboard.css';
+import AddDancer from './AddDancer';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -38,6 +39,9 @@ class Dashboard extends Component {
   }
 
   render() {
+
+    console.log(this.props)
+    
     return (
 
        <div id="dashboard">
@@ -114,6 +118,8 @@ class Dashboard extends Component {
 
 				</form>
 			</div>
+
+      <AddDancer/>
 
 
       {/* <div id="parent-form">

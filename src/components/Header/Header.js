@@ -20,7 +20,7 @@ class Header extends Component {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/schedule">Schedule</Link></li>
-                <li><Link to="/parentportal">Parents</Link></li>
+                <li><Link to="/parentportal">Parent</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>

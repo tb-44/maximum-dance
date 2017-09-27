@@ -9,7 +9,7 @@ class Contact extends Component {
     this.state ={
       messages: []
     }
-    this.handleChange = this.handleChange.bind(this);
+    this.handleMessageChange = this.handleMessageChange.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class Contact extends Component {
       })
 }
 
-handleChange(e) {
+handleMessageChange(e) {
   this.setState({
 
     name: e.target.value,
@@ -48,35 +48,35 @@ handleChange(e) {
 						<label >Name:</label>
 
 						<input id='formFirstName' className='form-input' name='name' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.name} />
+            onChange={(e) => this.state.handleMessageChange(e)} value={this.state.name} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Email:</label>
 
 						<input id='formEmail' className='form-input' name='email' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.email} />
+            onChange={(e) => this.state.handleMessageChange(e)} value={this.state.email} />
 					</fieldset>
 
 					<fieldset className='form-group'>
 						<label>Phone:</label>
 
 						<input id='formPhone' className='form-input' name='phone' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.phone} />
+            onChange={(e) => this.state.handleMessageChange(e)} value={this.state.phone} />
 					</fieldset>
 
           <fieldset className='form-group'>
 						<label>Subject:</label>
 
 						<input id='formPhone' className='form-input' name='phone' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.subject} />
+            onChange={(e) => this.state.handleMessageChange(e)} value={this.state.subject} />
 					</fieldset>
 
           <fieldset className='form-group'>
 						<label>Message:</label>
 
 						<input id='formPhone' className='form-input' name='phone' type='text' 
-            onChange={(e) => this.state.handleChange(e)} value={this.state.message} />
+            onChange={(e) => this.state.handleMessageChange(e)} value={this.state.message} />
 					</fieldset>
 
 				</form>

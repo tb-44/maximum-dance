@@ -20,10 +20,6 @@ class AddDancer extends Component {
     this.handleSubmit = this.handleSubmit.bind( this );
   }
 
-  componentDidMount(){
-    
-  }
-
    handleChange(e, inputName) {
      this.setState({
        [inputName]: e.target.value
@@ -31,61 +27,54 @@ class AddDancer extends Component {
    }
 
   handleSubmit(e) {
-    
     e.preventDefault();
-
   }
 
   render() {
-      console.log(this.props.parent)
     return (
 
-       <div id="dashboard">
-         {/* <Header /> */}
+      <div id="dashboard">
         <section className="dashpage">
 
-      <div id="parent-form">
-				  <form className='form-parents'>
+        <div id="parent-form">
+				  <form className='parent_form'>
 
 					<fieldset className='form-parents'>
-            <p>*All fields are required for Registration of your Dancer</p>
+            <p>*All fields are required for Dancer Registration below</p>
 						<label >First Name:</label>
 
 						<input id='formFirstName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Last Name:</label>
 
 						<input id='formLastName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
 					</fieldset>
 
-					<fieldset className='form-group'>
-						<label>Class:</label>
+					<fieldset className='form-parents'>
+						<label>Classname:</label>
 
 						<input id='formClassName' className='form-input' name="classname" type='text' 
             onChange={ (e) => this.handleChange(e, "classname") } value={this.state.classname} />
 					</fieldset>
 
-					<fieldset className='form-group'>
+					<fieldset className='form-parents'>
 						<label>Age:</label>
 
-						<input id='formCity' className='form-input' name="age" type='text' 
+						<input id='formAge' className='form-input' name="age" type='text' 
             onChange={ (e) => this.handleChange(e, "age") } value={this.state.age} />
 					</fieldset>
 
-          <button className="submit-button-dancer" onClick={ () => this.props.addDancerInfo(this.state, this.props.parent.id) } >Submit</button>
+          <button className="submit-button" onClick={ () => this.props.addDancerInfo(this.state, this.props.parent.id) }>Submit</button>
 
 				</form>
 			</div>
 
-
- 
-
          {/* <h1>Maximum Dance</h1> */}
-         <div className='parentContainer'>
+         {/* <div className='parentContainer'> */}
              {/* <h4>Parent Information:</h4>
                  {this.props.parent ? <img className='avatar' src={this.props.parent.img} alt='' /> : null }
                 
@@ -94,9 +83,8 @@ class AddDancer extends Component {
                  <p>Last Name: { this.props.parent ? this.props.parent.lastname : null }</p>
                 </div> */}
 
-                 <a href={process.env.REACT_APP_LOGOUT}><button>Logout</button></a>
-         </div>
-
+                 {/* <a href={process.env.REACT_APP_LOGOUT}><button>Logout</button></a>
+         </div> */}
 
       </section>
 			</div>

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getParentInfo, addParentInfo } from '../../ducks/reducer';
 import Header from './../Header/Header';
-import './Dashboard.css';
 import AddDancer from './AddDancer';
+import './Dashboard.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -39,13 +39,12 @@ class Dashboard extends Component {
   }
 
   render() {
-
-    console.log(this.props)
-    
     return (
 
        <div id="dashboard">
          <Header />
+
+        <div className="dash-container">
         <section className="dashpage">
 
         {/* <div className="welcome-container">
@@ -57,113 +56,69 @@ class Dashboard extends Component {
         <div id="parent-form">
 				  <form className='parent_form'>
 
+          <div className="flex-inner-wrapper">
+
 					<fieldset className='form-parents'>
             <p>*All fields are required for Parent Registration below</p>
-						<label >First Name:</label>
-
+						<label for="text">First Name:</label>
 						<input id='formFirstName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>Last Name:</label>
-
 						<input id='formLastName' className='form-input' name="name" type='text' 
             onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>Email:</label>
-
 						<input id='formEmail' className='form-input' name="email" type='text' 
             onChange={ (e) => this.handleChange(e, "email") } value={this.state.email} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>Address:</label>
-
 						<input id='formAddress' className='form-input' name="address" type='text' 
             onChange={ (e) => this.handleChange(e, "address") } value={this.state.address} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>city:</label>
-
 						<input id='formCity' className='form-input' name="city" type='text' 
             onChange={ (e) => this.handleChange(e, "city") } value={this.state.city} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>State:</label>
-
 						<input id='formState' className='form-input' name="state" type='text' 
             onChange={ (e) => this.handleChange(e, "state") } value={this.state.state} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>Zip:</label>
-
 						<input id='formZip' className='form-input' name="zip" type='text' 
             onChange={ (e) => this.handleChange(e, "zip") } value={this.state.zip} />
 					</fieldset>
 
 					<fieldset className='form-parents'>
 						<label>Phone:</label>
-
 						<input id='formPhone' className='form-input' name="phone" type='text' 
             onChange={ (e) => this.handleChange(e, "phone") } value={this.state.phone} />
 					</fieldset>
 
           <button className="submit-button" onClick={ () => this.props.addParentInfo(this.state) } >Submit</button>
+        </div>
 
 				</form>
 			</div>
 
+      <div className="add-dancer-container">
       <AddDancer/>
-
-
-      {/* <div id="parent-form">
-				  <form className='form-parents'>
-
-					<fieldset className='form-parents'>
-            <p>*All fields are required for Registration of your Dancer</p>
-						<label >First Name:</label>
-
-						<input id='formFirstName' className='form-input' name="name" type='text' 
-            onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
-					</fieldset>
-
-					<fieldset className='form-group'>
-						<label>Last Name:</label>
-
-						<input id='formLastName' className='form-input' name="name" type='text' 
-            onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
-					</fieldset>
-
-					<fieldset className='form-group'>
-						<label>Class:</label>
-
-						<input id='formAddress' className='form-input' name="address" type='text' 
-            onChange={ (e) => this.handleChange(e, "classname") } value={this.state.classname} />
-					</fieldset>
-
-					<fieldset className='form-group'>
-						<label>Age:</label>
-
-						<input id='formCity' className='form-input' name="city" type='text' 
-            onChange={ (e) => this.handleChange(e, "age") } value={this.state.age} />
-					</fieldset>
-
-          <button className="submit-button-dancer" onClick={ () => this.props.addDancerInfo(this.state) } >Submit</button>
-
-				</form>
-			</div> */}
-
-
- 
+      </div>
 
          {/* <h1>Maximum Dance</h1> */}
-         <div className='parentContainer'>
+         {/* <div className='parentContainer'> */}
              {/* <h4>Parent Information:</h4>
                  {this.props.parent ? <img className='avatar' src={this.props.parent.img} alt='' /> : null }
                 
@@ -172,11 +127,12 @@ class Dashboard extends Component {
                  <p>Last Name: { this.props.parent ? this.props.parent.lastname : null }</p>
                 </div> */}
 
-                 <a href={process.env.REACT_APP_LOGOUT}><button>Logout</button></a>
-         </div>
+                 <a href={process.env.REACT_APP_LOGOUT}><button className="submit-button">Logout</button></a>
+         {/* </div> */}
 
 
       </section>
+      </div>
 			</div>
     );
   }

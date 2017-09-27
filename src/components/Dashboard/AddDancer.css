@@ -1,28 +1,4 @@
-
-section.flex-inner-wrapper {
-    display: block;
-    justify-content: center;
-    padding: 10px;
-}
-
-.parent-form {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: stretch;
-	align-content: center;
-}
-
-/* .flex-inner-wrapper{
-    display: inherit;
-    flex-flow: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-} */
-
-
-   form {
+ /* form {
         padding: 2rem;
         margin-top: 2rem;
         margin-right: auto;
@@ -59,11 +35,13 @@ section.flex-inner-wrapper {
         color: #55595c;
         background-color: white;
         background-image: none;
+        background-clip: padding-box;
         border-top: 0;
         border-right: 0;
         border-bottom: 1px solid #eee;
         border-left: 0;
         border-radius: 3px;
+        transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
     }
 
     input:focus {
@@ -89,4 +67,4 @@ section.flex-inner-wrapper {
     .submit-button:focus,
     .submit-button:hover {
         background-color: #A5656D;
-    }
+    } */

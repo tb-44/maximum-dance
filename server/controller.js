@@ -9,7 +9,10 @@ module.exports = {
             .catch(err => {res.status(500).send()})
     },
 
+    //create/Register a new dancer from Parents input in Parent Portal
+    //The parent_id is connected to dancer database (foreign key connection)
     createDancer: (req, res) => {
+        console.log(req.params.id)
         console.log(req.body)
         const dbInstance = req.app.get('db');
         const {firstName, lastName, classname, age} = req.body;

@@ -4,6 +4,7 @@ import videobkgd1 from './DanceMov.webm';
 import Sidenav from './Sidenav';
 import homeIcon from './maximum-dance-logo-video-overlay.png';
 import svg from './hamburger.svg';
+import Typist from 'react-typist';
 
 class Home extends Component {
 	constructor() {
@@ -32,6 +33,11 @@ class Home extends Component {
 		return (
 			<div className="main-container">
 				<div className="fullscreen-bg">
+
+					<Typist className="MyTypist_Text">
+  						Dancing is like dreaming with your feet
+					</Typist>
+
 					<button className="logo" onClick={() => this.toggleMenu()}>
 						<img src={svg} alt="" /></button>
 

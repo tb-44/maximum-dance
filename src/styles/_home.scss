@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script'); 
 
  .main-container {
   display: flex;
@@ -15,6 +16,48 @@
   left: 0;
   opacity: 0.85;
 }
+
+.Typist {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 70%;
+  left:  0;
+  color: pink;
+  font-size: 45px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.Typist .Cursor {
+  // display: inline-block; 
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  
+}
+  .Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 0.75s linear infinite; 
+  }
+
+  .MyTypist_Text {
+    animation-delay: 5000;
+  }
+
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } 
+
+  }
 
 .fullscreen-bg {
   float: left;

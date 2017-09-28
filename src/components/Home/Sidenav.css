@@ -3,30 +3,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-  font-family: Courgette, cursive;
-  vertical-align: baseline;
-
-} */
 
 .mobile_menu_container {
-    height: 35vh;
+    height: 42vh;
     width:200px;
     background: lightgray;
     position: fixed;
@@ -44,13 +23,12 @@ time, mark, audio, video {
   }
 
   .mobile_menu_header {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background: #F4BEBC;
     display: flex;
     justify-content: center;
     text-shadow: 5pc;
-    
   }
 
   .close_button {
@@ -66,7 +44,7 @@ time, mark, audio, video {
   }
 
   .home  {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background: white;
     color: black;
@@ -76,7 +54,7 @@ time, mark, audio, video {
     align-items: center;
   }
   
-  /* a:hover {
+  .mobile_menu_header a:hover {
     background-color: #F4BEBC;
-  } */
+  }
   

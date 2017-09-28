@@ -4,7 +4,6 @@ import videobkgd1 from './DanceMov.webm';
 import Sidenav from './Sidenav';
 import homeIcon from './maximum-dance-logo-video-overlay.png';
 import svg from './hamburger.svg';
-import './Home.css';
 
 class Home extends Component {
 	constructor() {

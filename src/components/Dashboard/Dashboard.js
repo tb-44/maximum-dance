@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { getParentInfo, addParentInfo } from '../../ducks/reducer';
 import Header from './../Header/Header';
 import AddDancer from './AddDancer';
-import './Dashboard.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -51,7 +50,7 @@ class Dashboard extends Component {
 
           <div className="step1">
             <h3>Step 1: Online Parent Registration</h3> 
-            <p>Please fill out registration form, if you have not already?</p>
+            <p>Please fill out registration form with parent information, if you have not already?</p>
           </div>
 
         <div className="dash-container">
@@ -63,59 +62,61 @@ class Dashboard extends Component {
 					    <fieldset className='form-parents'>
                 <p>*All fields are required for Parent Registration below</p>
 						    <label for="text">First Name:</label>
-						    <input id='formFirstName' className='form-input' name="name" type='text' 
+						    <input id='formFirstName' placeholder="First Name" className='form-input' name="name" type='text' 
                 onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>Last Name:</label>
-						    <input id='formLastName' className='form-input' name="name" type='text' 
+						    <input id='formLastName' placeholder="Last Name" className='form-input' name="name" type='text' 
                 onChange={ (e) => this.handleChange(e, "lastName") } value={this.state.lastname} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>Email:</label>
-						    <input id='formEmail' className='form-input' name="email" type='text' 
+						    <input id='formEmail' placeholder="Email" className='form-input' name="email" type='text' 
                 onChange={ (e) => this.handleChange(e, "email") } value={this.state.email} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>Address:</label>
-						    <input id='formAddress' className='form-input' name="address" type='text' 
+						    <input id='formAddress' placeholder="Address" className='form-input' name="address" type='text' 
                 onChange={ (e) => this.handleChange(e, "address") } value={this.state.address} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>city:</label>
-						    <input id='formCity' className='form-input' name="city" type='text' 
+						    <input id='formCity' placeholder="City" className='form-input' name="city" type='text' 
                 onChange={ (e) => this.handleChange(e, "city") } value={this.state.city} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>State:</label>
-						    <input id='formState' className='form-input' name="state" type='text' 
+						    <input id='formState' placeholder="State" className='form-input' name="state" type='text' 
                 onChange={ (e) => this.handleChange(e, "state") } value={this.state.state} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>Zip:</label>
-						    <input id='formZip' className='form-input' name="zip" type='text' 
+						    <input id='formZip' placeholder="Zip" className='form-input' name="zip" type='text' 
                 onChange={ (e) => this.handleChange(e, "zip") } value={this.state.zip} />
 					    </fieldset>
 
 					    <fieldset className='form-parents'>
 						    <label>Phone:</label>
-						    <input id='formPhone' className='form-input' name="phone" type='text' 
+						    <input id='formPhone' placeholder="Phone" className='form-input' name="phone" type='text' 
                 onChange={ (e) => this.handleChange(e, "phone") } value={this.state.phone} />
 				    	</fieldset>
 
             <button className="submit-button" onClick={ () => this.props.addParentInfo(this.state) } >Submit</button>
+           
           </div>
 				</form>
 
         <div className="step2">
           <h3>Step 2: Online Student (Dancer) Registration</h3> 
-          <p>Please fill out registration form, if you have not already?</p>
+          <p>Please fill out registration form, if you have not already?
+            Or you can add another student</p>
         </div>
 
           <div className="add-dancer-container">
@@ -125,8 +126,8 @@ class Dashboard extends Component {
             <div className="button-div">
               <a href={process.env.REACT_APP_LOGOUT}><button className="submit-button">Logout</button></a>
             </div>
-
         </section>
+
       </div>
 		</div>
     );
@@ -136,7 +137,8 @@ class Dashboard extends Component {
 function mapStateToProps(state){
   return {
     parent: state.parent
+    
   }
 }
 
-export default connect( mapStateToProps, { getParentInfo, addParentInfo } )(Dashboard);
+export default connect( mapStateToProps, { getParentInfo, addParentInfo} )(Dashboard);

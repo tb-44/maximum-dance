@@ -32,15 +32,12 @@ export function addParentInfo(obj){
 }
 
 export function addDancerInfo(obj, id){
-    // console.log(obj)
-    // console.log(id)
     const newDancerInfo = axios.post('http://localhost:3005/api/create_dancer/' + id, obj).then( res => {
         return res.data
     })
     return {
         type: ADD_DANCER_INFO,
         payload: newDancerInfo
-        // obj
     }
 }
 

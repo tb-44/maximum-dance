@@ -4,7 +4,6 @@ import instructor1 from '.././img/Taralee_resized.jpg';
 import instructor2 from '.././img/JulieCordery_resized.jpg';
 import instructor3 from '.././img/AllysonCrapo_resized.jpg';
 import instructor4 from '.././img/Deborah_resized.jpg';
-import './About.css';
 
 class About extends Component {
   render() {
@@ -154,7 +153,7 @@ class About extends Component {
         <section className="section content">
           <div className="container2">
 
-            <h3>Dancing Is Like Dreaming with your feet</h3>
+            <h3>DANCING IS LIKE DREAMING WITH YOUR FEET</h3>
             
           </div>
         </section>
@@ -169,8 +168,8 @@ class About extends Component {
             <h2>DANCE CLASSES AVAILABLE</h2>
             <p>Hip Hop <br />
 
-                Beginning/Intermediate Wednesday 7-8pm <br/>
-                Intermediate/Advanced Thursday 8;15-9:15pm<br/>
+                Beginning/Intermediate Wednesday 7-8 pm <br/>
+                Intermediate/Advanced Thursday 8:15-9:15 pm<br/>
                 <br/>
 
                 Jazz/Technique <br />
@@ -184,9 +183,9 @@ class About extends Component {
 
                 Ballet <br />
                 4:30-5:30<br />
-                Thurs, Beginning 4:30-5:30<br />
-                Thurs Intermediate 5:30-6:45<br />
-                Thurs. Adv 6:45- 8:15<br />
+                Thurs, Beginning 4:30-5:30 pm<br />
+                Thurs Intermediate 5:30-6:45 pm<br />
+                Thurs. Adv 6:45-8:15 pm<br />
                 <br />
                 Choreograpy<br />
                 Monday 5:30-6:30 Enchant<br />
@@ -194,11 +193,12 @@ class About extends Component {
                 Tuesday 5:30-6:30 Illusion<br />
                 <br />
                 Turns<br />
-                Friday 4:30-5:30 Inter./Adv<br />
+                Intermediate/Adv.
+                Friday 4:30-5:30 pm<br />
 
                 3-5 year old Jazz/Ballet combo class<br />
-                Mon 11-12pm<br />
-                Mon 1-2pm<br />
+                Mon 11-12 pm<br />
+                Mon 1-2 pm<br />
               </p>
               
           </div>

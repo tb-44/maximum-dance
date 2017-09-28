@@ -1,35 +1,32 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
-import './Contact.css';
 
 class Contact extends Component {
   constructor(props) {
-    super();
+    super(props);
 
-    this.state ={
-      messages: []
+    this.state = {
+
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+
     }
+
     this.handleMessageChange = this.handleMessageChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // axios.post('http://localhost:3005/api/parent').then(res => {
-      this.setState({
-        // messages: res.data
-        
-      })
+handleMessageChange(e, inputName) {
+  this.setState({
+    [inputName]: e.target.value
+  });
 }
 
-handleMessageChange(e) {
-  this.setState({
-
-    name: e.target.value,
-    email: e.target.value,
-    phone: e.target.value,
-    subject: e.target.value,
-    message: e.target.value,
-  
-  });
+handleSubmit(e) {
+  e.preventDefault();
 }
 
   render() {
@@ -81,10 +78,8 @@ handleMessageChange(e) {
 
 				</form>
 
-        <button>Send Message</button>
+        <button className="submit-button" onClick={ () => this.props.handleSubmit(this.state) }>Submit</button>
 			</div>
-
-
 
       </div>
     );

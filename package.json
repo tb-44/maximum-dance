@@ -14,6 +14,8 @@
     "js-beautify": "^1.6.14",
     "massive": "^4.0.0",
     "moment": "^2.18.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
     "passport-auth0": "^0.6.0",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
@@ -26,8 +28,11 @@
     "redux-promise-middleware": "^4.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

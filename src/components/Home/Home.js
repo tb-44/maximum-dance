@@ -23,7 +23,7 @@ class Home extends Component {
 			showMenu: !this.state.showMenu
 		})
 	}
-	
+
 	toggleSubMenu() {
 		this.setState({
 			showSubMenu: !this.state.showSubMenu
@@ -47,7 +47,7 @@ class Home extends Component {
 						toggleSubMenu={this.toggleSubMenu}
 						showSubMenu={this.state.showSubMenu} />
 
-					<img src={homeIcon} alt='' className="video-overlay" />
+					<img src={homeIcon} alt='homeIcon' className="video-overlay" />
 					<video className="fullscreen-bg__video" autoPlay preload loop muted width="650" height="350">
 						<source src={videobkgd} type="video/mp4" />
 						<source src={videobkgd1} type="video/webm" />

@@ -1,3 +1,4 @@
+
 .About-main-container {
   padding: 0;
   margin: 0;
@@ -21,7 +22,7 @@ section {
   box-shadow: 6px 6px 40px -6px #999; 
   border-radius: 20px;
   margin: 15px;
-  background-color: #E2DCDC;
+  background: url('./pattern.png');
 }
 
 .bio_container {
@@ -33,7 +34,8 @@ section {
   background-color: white;
   box-shadow: 6px 6px 40px -6px #999; 
   border-radius: 20px;
-  background-color:#E2DCDC;
+  // background-color:#E2DCDC;
+  background: url('./pattern.png');
 }
 
 .about1_text {
@@ -58,6 +60,7 @@ section {
   padding: 10px;
   justify-content: center;
   align-items: center;
+  
 }
 
 .about3_text {
@@ -76,7 +79,7 @@ section {
   background-color: white;
   box-shadow: 6px 6px 40px -6px #999; 
   border-radius: 20px;
-  background-color:#E2DCDC;
+  background: url('./pattern.png');
   margin: 20px;
 }
 
@@ -89,7 +92,7 @@ section {
   background-color: white;
   box-shadow: 6px 6px 40px -6px #999; 
   border-radius: 20px;
-  background-color:#E2DCDC;
+  background: url('./pattern.png');
 }
 
 .bio_container4 {
@@ -101,13 +104,13 @@ section {
   background-color: white;
   box-shadow: 6px 6px 40px -6px #999; 
   border-radius: 20px;
-  background-color:#E2DCDC;
+  background: url('./pattern.png');
   margin: 20px;
 }
 
   section.section:last-child {
     margin-bottom: 0;
-    background-color: darkgray !important; 
+    background: url('./pattern.png');
   }
 
   section.section h2 {

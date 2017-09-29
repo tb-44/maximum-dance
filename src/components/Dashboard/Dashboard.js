@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getParentInfo, addParentInfo } from '../../ducks/reducer';
 import Header from './../Header/Header';
 import AddDancer from './AddDancer';
+import DashboardInformation from './DashboardInformation';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Dashboard extends Component {
 
   componentDidMount(){
     this.props.getParentInfo();
+    
   }
 
    handleChange(e, inputName) {
@@ -61,7 +63,7 @@ class Dashboard extends Component {
 
 					    <fieldset className='form-parents'>
                 <p>*All fields are required for Parent Registration below</p>
-						    <label for="text">First Name:</label>
+						    <label>First Name:</label>
 						    <input id='formFirstName' placeholder="First Name" className='form-input' name="name" type='text' 
                 onChange={ (e) => this.handleChange(e, "firstName") } value={this.state.firstname} />
 					    </fieldset>
@@ -129,6 +131,7 @@ class Dashboard extends Component {
         </section>
 
       </div>
+        <DashboardInformation/>
 		</div>
     );
   }

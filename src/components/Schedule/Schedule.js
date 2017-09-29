@@ -6,8 +6,32 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 
 class Schedule extends Component {
+  constructor(){
+    super();
+    
+    this.state = {
+      classInfo: []
+    }
+  }
+
+  // componentDidMount() {
+  //   axios.get('http://localhost:3005/api/getClasses').then(res => {
+  //     this.setState({
+  //       classInfo: res.data
+  //     })
+  //     console.log(this.state.classInfo)
+  //   })
+  // }
   
   render() {
+
+    // var classDisplay = this.state.classInfo.map((classes,i) => {
+    //   return (<div key={i} >
+    //     <h2> { } </h2>
+    //     <h3> { } </h3>
+    //     </div>
+    //   )
+    // })
 
     BigCalendar.momentLocalizer(moment);
     const myEventsList = [];

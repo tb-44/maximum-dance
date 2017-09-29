@@ -36,7 +36,7 @@ class Home extends Component {
 				<div className="fullscreen-bg">
 
 					<Typist className="MyTypist_Text">
-  						Dancing is like dreaming with your feet!
+  						Dancing is like dreaming with your feet
 					</Typist>
 
 					<button className="logo" onClick={() => this.toggleMenu()}>

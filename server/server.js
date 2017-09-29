@@ -57,9 +57,6 @@ passport.serializeUser(function(user, done) {
 
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(user, done){
-  // app.get('db').find_session_parent(user[0].id).then(user => {
-  //   return done(null, user[0]);
-  // })
   done(null, user);
 });
 
@@ -81,14 +78,13 @@ app.get('/auth/me', (req, res) => {
 //ENDPOINT (Logout)
 app.get('/auth/logout', (req, res) => {
   req.logout() //PASSPORT GIVES US THIS TO TERMINATE A LOGIN SESSION
-  return res.redirect(302, 'http://localhost:3000/#/'); //res.redirect comes from express to redirect user to the given url
-    //302 is the status code for redirect
+  return res.redirect(302, 'http://localhost:3000/#/'); 
 })
 
 //PARENT AND DANCER ENDPOINTS FROM CONTROLLER
 app.post('/api/create_parent', controller.createParent);
 app.post('/api/create_dancer/:id', controller.createDancer);
-
+app.post('/api/getDancerInfo', controller.getDancer);
 
 let PORT = 3005;
 app.listen(PORT, () => {

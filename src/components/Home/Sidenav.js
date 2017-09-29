@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Sidenav.css';
 
 export default class Sidenav extends Component {
     render() {

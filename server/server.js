@@ -8,7 +8,7 @@ const massive = require('massive');
 const session = require('express-session');
 const controller = require('./controller');
 const cors = require('cors');
-const stripe = require('stripe')(process.env.REACT_APP_SECRET_KEY);
+const stripe = require('stripe')( process.env.REACT_APP_SECRET_KEY );
 
 const app = express();
 app.use( bodyParser.json() );
@@ -108,6 +108,7 @@ app.post('/api/payment', function(req, res, next){
     	pennies.push(amountArray[i])
     }
   }
+  
   const convertedAmt = parseInt(pennies.join(''));
 
   const charge = stripe.charges.create({
@@ -118,9 +119,6 @@ app.post('/api/payment', function(req, res, next){
 }, function(err, charge) {
     if (err) return res.sendStatus(500)
     return res.sendStatus(200);
-  // if (err && err.type === 'StripeCardError') {
-  //   // The card has been declined
-  // }
 });
 });
 

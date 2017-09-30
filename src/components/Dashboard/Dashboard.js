@@ -4,8 +4,8 @@ import { getParentInfo, addParentInfo } from '../../ducks/reducer';
 import Header from './../Header/Header';
 import AddDancer from './AddDancer';
 import DashboardInformation from './DashboardInformation';
-// import StripeCheckout from 'react-stripe-checkout';
-// import axios from 'axios';
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
 
 
 class Dashboard extends Component {
@@ -42,15 +42,13 @@ class Dashboard extends Component {
     e.preventDefault();
   }
 
-  // onToken = (token) => {
-  //   token.card = void 0;
-  //   console.log('token', token);
-  //   axios.post('http://localhost:3005/api/payment', { token, amount: 100 } ).then(response => {
-  //     alert('we are in business')
-  //   });
-  // }
-
-
+  onToken = (token) => {
+    token.card = void 0;
+    console.log('token', token);
+    axios.post('http://localhost:3005/api/payment', { token, amount: 100} ).then(response => {
+      alert('Your Fees are all paid up!')
+    });
+  }
 
   render() {
     return (
@@ -146,11 +144,11 @@ class Dashboard extends Component {
       </div>
         <DashboardInformation/>
         <br/>
-{/* 
+
         <StripeCheckout
           token={this.onToken}
-          stripeKey={ stripe.pub_key }
-          amount={1000} /> */}
+          stripeKey={ process.env.REACT_APP_PUBLISHABLE_KEY }
+          amount={30000} />
 
 		</div>
     );

@@ -39,13 +39,15 @@ class Home extends Component {
   						Dancing is like dreaming with your feet
 					</Typist>
 
-					<button className="logo" onClick={() => this.toggleMenu()}>
-						<img src={svg} alt="" /></button>
+					<button className="logo" onClick={ () => this.toggleMenu() }>
+						<img src={svg} alt="" />
+					</button>
 
 					<Sidenav toggleMenu={this.toggleMenu}
 						showMenu={this.state.showMenu}
 						toggleSubMenu={this.toggleSubMenu}
-						showSubMenu={this.state.showSubMenu} />
+						showSubMenu={this.state.showSubMenu} 
+					/>
 
 					<img src={homeIcon} alt='homeIcon' className="video-overlay" />
 					<video className="fullscreen-bg__video" autoPlay preload loop muted width="650" height="350">

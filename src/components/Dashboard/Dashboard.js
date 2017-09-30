@@ -46,7 +46,7 @@ class Dashboard extends Component {
     token.card = void 0;
     console.log('token', token);
     axios.post('http://localhost:3005/api/payment', { token, amount: 100} ).then(response => {
-      alert('Your Fees are all paid up!')
+      alert('Your Fees are now paid up for the month!')
     });
   }
 
@@ -140,7 +140,6 @@ class Dashboard extends Component {
               <a href={process.env.REACT_APP_LOGOUT}><button className="submit-button">Logout</button></a>
             </div>
         </section>
-
       </div>
         <DashboardInformation/>
         <br/>
@@ -148,8 +147,9 @@ class Dashboard extends Component {
         <StripeCheckout
           token={this.onToken}
           stripeKey={ process.env.REACT_APP_PUBLISHABLE_KEY }
-          amount={30000} />
-
+          amount={30000} 
+        />
+        
 		</div>
     );
   }

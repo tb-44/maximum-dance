@@ -22,7 +22,6 @@ class ParentPortal extends Component {
 								<a href={process.env.REACT_APP_LOGIN}>
 								<button className="login-button">Login/Register</button></a>
 							</div>
-
 						</div>
 					</div>
 				</div>

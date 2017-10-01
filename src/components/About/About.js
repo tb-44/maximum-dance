@@ -6,6 +6,7 @@ import instructor3 from '.././img/AllysonCrapo_resized.jpg';
 import instructor4 from '.././img/Deborah_resized.jpg';
 
 class About extends Component {
+ 
   render() {
     return (
       <div className="About-main-container">
@@ -166,7 +167,7 @@ class About extends Component {
           <div className="container1">
 
             <h2>DANCE CLASSES AVAILABLE</h2>
-            <p>Hip Hop <br />
+            <p>Hip-Hop <br />
 
                 Beginning/Intermediate Wednesday 7-8 pm <br/>
                 Intermediate/Advanced Thursday 8:15-9:15 pm<br/>
@@ -182,7 +183,6 @@ class About extends Component {
                 <br />
 
                 Ballet <br />
-                4:30-5:30<br />
                 Thurs, Beginning 4:30-5:30 pm<br />
                 Thurs Intermediate 5:30-6:45 pm<br />
                 Thurs. Adv 6:45-8:15 pm<br />

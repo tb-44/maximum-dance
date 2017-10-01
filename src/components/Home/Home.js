@@ -14,6 +14,7 @@ class Home extends Component {
 			showMenu: false,
 			showSubMenu: false
 		}
+
 		this.toggleMenu = this.toggleMenu.bind(this);
 		this.toggleSubMenu = this.toggleSubMenu.bind(this);
 	}
@@ -29,6 +30,7 @@ class Home extends Component {
 			showSubMenu: !this.state.showSubMenu
 		})
 	}
+
 
 	render() {
 		return (

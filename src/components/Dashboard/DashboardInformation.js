@@ -24,17 +24,17 @@ class DashboardInformation extends Component {
     })
   }
 
+
   render() {
     console.log(this.state.dancerInfo)
 
     var dancers = this.state.dancerInfo.map((dancer, i) => {
       return (
-        <div key={i}>
-          <h3> {dancer.id} </h3>
-          <h3> {dancer.firstname} </h3>
-          <h3> {dancer.lastname} </h3>
-          <h3> {dancer.classname} </h3>
-          <h3> {dancer.age} </h3>
+        <div className="dancer" key={i}>
+          <h3>Dancer Name :  {dancer.firstname} <span> {dancer.lastname} </span></h3>
+          <h3>Registered Class :  {dancer.classname} </h3>
+          <h3>Age :  {dancer.age} </h3>
+          <h3>Dancer Fees Owed: $100</h3>
         </div>
       )
     })

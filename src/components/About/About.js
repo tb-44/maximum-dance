@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
-import instructor1 from '.././img/Taralee_resized.jpg';
-import instructor2 from '.././img/JulieCordery_resized.jpg';
-import instructor3 from '.././img/AllysonCrapo_resized.jpg';
+import instructor1 from '.././img/Taralee_black-white.jpg';
+import instructor2 from '.././img/Julie_black-white.jpg';
+import instructor3 from '.././img/Alyson_black-white.jpg';
 import instructor4 from '.././img/Deborah_resized.jpg';
 
 class About extends Component {

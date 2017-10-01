@@ -55,6 +55,18 @@ input:focus {
     border-bottom-color: black;
 }
 
+.dancer {
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 450px;
+    background-color: #A5656D;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: solid 1px;
+    color: white;
+}
+
 .submit-button {
     display: inline-block;
     padding: 1rem 1rem;

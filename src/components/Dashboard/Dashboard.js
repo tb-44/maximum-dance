@@ -55,14 +55,18 @@ class Dashboard extends Component {
 
       <div id="dashboard">
          <Header />
+
+         <div className="top_button-logout">
+              <a href={process.env.REACT_APP_LOGOUT}><button className="submit-button">Logout</button></a>
+            </div>
          
           <div className="title">
             <h2>Welcome to the Maximum Dance Dashboard</h2> 
-            <h2>{ this.props.parent ? this.props.parent.firstname : null }</h2>
+            <h2>{ this.props.parent ? this.props.parent.firstname : null } <span> { this.props.parent ? this.props.parent.lastname : null }</span></h2>
           </div>
 
           <div className="step1">
-            <h3>Step 1: Online Parent Registration</h3> 
+            <h3>Step 1:  Online Parent Registration</h3> 
             <p>Please fill out registration form with parent information, if you have not already?</p>
           </div>
 
@@ -127,8 +131,8 @@ class Dashboard extends Component {
 				</form>
 
         <div className="step2">
-          <h3>Step 2: Online Student (Dancer) Registration</h3> 
-          <p>Please fill out registration form, if you have not already?
+          <h3>Step 2: Online Dancer (Student) Registration</h3> 
+          <p>Please fill out registration form for your dancer (student), if you have not already?
             Or you can add another student</p>
         </div>
 
@@ -149,6 +153,7 @@ class Dashboard extends Component {
           stripeKey={ process.env.REACT_APP_PUBLISHABLE_KEY }
           amount={30000} 
         />
+        <br/>
         
 		</div>
     );

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato'); 
 
 .About-main-container {
   padding: 0;
@@ -162,6 +163,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  .container1 {
+    font-family: "Lato", serif;
   }
 
   .container2 {

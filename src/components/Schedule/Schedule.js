@@ -22,7 +22,7 @@ class Schedule extends Component {
       
       <div className="schedule_container">
         <Header />
-          
+
         <section>
           <div className="Class_schedule">
             <h1>Class Schedule</h1>

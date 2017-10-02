@@ -63,7 +63,7 @@ class About extends Component {
           <section>
             <div className="bio_container2">
               <div className="about1_text">
-                <h1>HIP HOP</h1></div>
+                <h1>JAZZ/TECHNIQUE</h1></div>
                 <img src={instructor2} alt="" />
              
               <div className="about2_text"><strong>Julie Cordery</strong></div>
@@ -83,7 +83,7 @@ class About extends Component {
           <section>
             <div className="bio_container3">
               <div className="about1_text">
-                <h1>JAZZ</h1></div>
+                <h1>HIP-HOP</h1></div>
                 <img src={instructor3} alt="" />
              
               <div className="about2_text"><strong>Allyson Crapo</strong></div>
@@ -137,11 +137,11 @@ class About extends Component {
         <section className="section content">
           <div className="container1">
 
-            <h2>OUR MISSION</h2>
+            <h3>OUR MISSION</h3>
             <p>Maxium Dance is fully committed to providing all dancers with an encouraging environment
               to excel with well rounded technique
             </p>
-            <h2>OUR MOTTO</h2>
+            <h3>OUR MOTTO</h3>
             <p>Dancing is the closest thing to Magic</p>
             
           </div>
@@ -166,7 +166,7 @@ class About extends Component {
         <section className="section content">
           <div className="container1">
 
-            <h2>DANCE CLASSES AVAILABLE</h2>
+            <h3>DANCE CLASSES AVAILABLE</h3>
             <p>Hip-Hop <br />
 
                 Beginning/Intermediate Wednesday 7-8 pm <br/>
@@ -195,7 +195,7 @@ class About extends Component {
                 Turns<br />
                 Intermediate/Adv.
                 Friday 4:30-5:30 pm<br />
-
+                <br/>
                 3-5 year old Jazz/Ballet combo class<br />
                 Mon 11-12 pm<br />
                 Mon 1-2 pm<br />

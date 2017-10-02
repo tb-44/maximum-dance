@@ -10,6 +10,19 @@ form {
      background-color: #F4BEBC;
      border-radius: 8px;
      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+     
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    top: 70%;
+    left:  0;
+    opacity: 0.8;
+    background-color: rgba(60, 56, 56, 0.35);
+    border: solid 2px #A5656D;
+    margin-top: 15px;
+    color: black;
 }
 
 .flex-inner-wrapper{
@@ -60,11 +73,11 @@ input:focus {
     margin-right: auto;
     margin-left: auto;
     max-width: 450px;
-    background-color: #A5656D;
-    border-radius: 8px;
+    background: url('./pattern.png');
+    border-radius: 20px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: solid 1px;
-    color: white;
+    border: solid 4px #A5656D;
+    color: #1D1A1A;
 }
 
 .submit-button {
@@ -76,7 +89,7 @@ input:focus {
     text-transform: uppercase;
     color: white;
     vertical-align: middle;
-    background-color: black;
+    background-color: #55595C;
     border: 1px solid transparent;
     box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
     cursor: pointer;
@@ -86,3 +99,6 @@ input:focus {
 .submit-button:hover {
     background-color: #A5656D;
 }
+
+
+

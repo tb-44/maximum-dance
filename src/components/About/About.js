@@ -154,7 +154,7 @@ class About extends Component {
         <section className="section content">
           <div className="container2">
 
-            <h3>DANCING IS LIKE DREAMING WITH YOUR FEET</h3>
+            <h3>Dancing Is Like Dreaming With Your Feet</h3>
             
           </div>
         </section>
@@ -169,23 +169,22 @@ class About extends Component {
             <h3>DANCE CLASSES AVAILABLE</h3>
             <p>Hip-Hop <br />
 
-                Beginning/Intermediate Wednesday 7-8 pm <br/>
-                Intermediate/Advanced Thursday 8:15-9:15 pm<br/>
+                Beginner/Intermediate Wednesday @ 7-8 pm<br/>
+                Intermediate/Advanced Thursday @ 8:15-9:15 pm<br/>
                 <br/>
 
                 Jazz/Technique <br />
-
-                Mon 4:30-5:30 Adv. Jazz Technique  11 years and up <br />
-                Monday Inter. 7:45-9:30 pm 8-14 years old  <br />
-                Tuesday 4:30-5:30 Beg/Inter 6-10 years old  <br />
-                Tuesday 6:30-7:30 Beg/Inter 6-10 years old  <br />
-                Tues Adv. 8-9 pm ages 11 years and up   <br />
+                11 years and up - Advanced Monday @ 4:30-5:30 pm (Technique)<br />
+                11 years and up - Advanced Tuesday @ 8:00 - 9:00 pm<br />
+                8-14 years old - Intermediate Monday @ 7:45-9:30 pm<br />
+                6-10 years old - Beginner/Intermediate Tuesday @ 4:30-5:30 pm<br />
+                6-10 years old - Beginner/Intermediate Tuesday @ 6:30-7:30 pm<br />
                 <br />
 
                 Ballet <br />
-                Thurs, Beginning 4:30-5:30 pm<br />
-                Thurs Intermediate 5:30-6:45 pm<br />
-                Thurs. Adv 6:45-8:15 pm<br />
+                Beginner Thursday @ 4:30-5:30 pm<br />
+                Intermediate Thursday @ 5:30-6:45 pm<br />
+                Advanced Thursday @ 6:45-8:15 pm<br />
                 <br />
                 Choreograpy<br />
                 Monday 5:30-6:30 Enchant<br />
@@ -193,12 +192,12 @@ class About extends Component {
                 Tuesday 5:30-6:30 Illusion<br />
                 <br />
                 Turns<br />
-                Intermediate/Adv.
-                Friday 4:30-5:30 pm<br />
+                Intermediate/Advanced
+                Friday @ 4:30-5:30 pm<br />
                 <br/>
                 3-5 year old Jazz/Ballet combo class<br />
-                Mon 11-12 pm<br />
-                Mon 1-2 pm<br />
+                Monday @ 11-12 pm<br />
+                Monday @ 1-2 pm<br />
               </p>
               
           </div>

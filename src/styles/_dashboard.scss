@@ -9,8 +9,7 @@ form {
      max-width: 50rem;
      background-color: #F4BEBC;
      border-radius: 8px;
-     box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-     
+     box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); 
 }
 
 .title {
@@ -75,8 +74,8 @@ input:focus {
     max-width: 450px;
     background: url('./pattern.png');
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: solid 4px #A5656D;
+    box-shadow: 6px 6px 40px -6px #999; 
+    border: solid 2px #F4BEBC;
     color: #1D1A1A;
 }
 
@@ -91,7 +90,7 @@ input:focus {
     vertical-align: middle;
     background-color: #55595C;
     border: 1px solid transparent;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    box-shadow: 6px 6px 40px -6px #999; 
     cursor: pointer;
 }
 

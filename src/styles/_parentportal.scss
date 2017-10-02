@@ -3,6 +3,20 @@
   margin: 0;
   padding: 0;
   font-size: 18px;
+  width: 100%;
+  height: auto;
+  top: 70%;
+  left:  0;
+  opacity: 0.8;
+  background-color: rgba(60, 56, 56, 0.35);
+  border: solid 2px #A5656D;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.register {
+  margin-bottom: 15px;
 }
 
 .login-container {
@@ -17,14 +31,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 280px;
   width: 325px;
   padding-bottom: 25px;
   background: url('./pattern.png');
   border-radius: 20px;
-  border-style: 1px solid;
-  border-color: #F4BEBC;
   padding: 20px;
+  margin-bottom: 15px;
 }
 
 .login-button {
@@ -34,7 +47,7 @@
 	box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.2);
 	border-radius: 4px;
 	padding: 5px 20px;
-	border: none;
+	border: solid 2px #A5656D;
 	min-width: 325px;
   height: 40px; 
 }

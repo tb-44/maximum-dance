@@ -7,11 +7,15 @@ class ParentPortal extends Component {
 	render() {
 		return (
 			<div id="parent-portal-container">
-				<Header/>
+			  <Header/>
 				<div className="central-login">
 					<div className="login-container">
 						<div className="parent-portal">
 							<h2>Welcome to the Parent Portal</h2>
+						</div>
+
+						<div className="register">
+							Please register or log into your account
 						</div>
 						
 						<div className="login-button-container">

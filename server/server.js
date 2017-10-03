@@ -86,6 +86,7 @@ app.get('/auth/logout', (req, res) => {
 app.post('/api/create_parent', controller.createParent);
 app.post('/api/create_dancer/:id', controller.createDancer);
 app.post('/api/getDancerInfo', controller.getDancer);
+app.get('/api/getAllInfo', controller.getAllInfo);
 
 app.post('/api/payment', function(req, res, next){
   //convert amount to pennies

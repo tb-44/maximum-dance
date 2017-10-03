@@ -30,7 +30,7 @@ class DashboardInformation extends Component {
     var dancers = this.state.dancerInfo.map((dancer, i) => {
       return (
         <div className="dancer" key={i}>
-          <h3>Dancer Name :  {dancer.firstname} <span> {dancer.lastname} </span></h3>
+          <h3>Dancer Name : {dancer.firstname} <span> {dancer.lastname} </span></h3>
           <h3>Registered Class :  {dancer.classname} </h3>
           <h3>Age :  {dancer.age} </h3>
           <h3>Dance Fees: ${classFees} <span>per month</span></h3>
@@ -39,11 +39,11 @@ class DashboardInformation extends Component {
     })
 
     return (
-      
+
       <div id="dashboardInfo">
         <div>
           <h2>Your student(s) are already registered!</h2>
-          <h3>Please pay your monthly fees below:</h3>
+          <h3>Please pay your monthly fees below with credit card:</h3>
         </div>
         {dancers}
       </div>

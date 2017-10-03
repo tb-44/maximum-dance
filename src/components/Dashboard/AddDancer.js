@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addDancerInfo } from '../../ducks/reducer';
+import { addDancerInfo, getAllInfo } from '../../ducks/reducer';
 
 class AddDancer extends Component {
   constructor(props) {
@@ -67,7 +67,7 @@ class AddDancer extends Component {
 					</fieldset>
 
           <button className="submit-button" onClick={ () => this.props.addDancerInfo(this.state, this.props.parent.id) }>Submit</button>
-            
+          {/* <button className="submit2-button" onClick={ () => this.props.getAllInfo(this.state, this.props.parent.id) }>Submit</button> */}
 				</form>
 			</div>
 
@@ -83,4 +83,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect( mapStateToProps, { addDancerInfo } )(AddDancer);
+export default connect( mapStateToProps, { addDancerInfo, getAllInfo } )(AddDancer);

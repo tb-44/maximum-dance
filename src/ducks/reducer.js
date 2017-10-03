@@ -12,6 +12,7 @@ const GET_PARENT_INFO = "GET_PARENT_INFO";
 const ADD_PARENT_INFO = "ADD_PARENT_INFO";
 const ADD_DANCER_INFO = "ADD_DANCER_INFO";
 const GET_DANCER_INFO = "GET_DANCER_INFO";
+const GET_ALL_INFO = "GET_ALL_INFO";
 
 //ACTION CREATORS
 export function getParentInfo() {
@@ -55,6 +56,17 @@ export function getDancerInfo(id) {
     }
 }
 
+export function getAllInfo(id) {
+    const getAllInformation = axios.get('http://localhost:3005/api/getAllInfo', id).then( res => {
+        return res.data;
+    })
+    return {
+        type: GET_ALL_INFO,
+        payload: getAllInformation
+    }
+}
+
+
 //REDUCER FUNCTION
 export default function reducer(state = initialState, action) {
     switch(action.type) {
@@ -72,7 +84,10 @@ export default function reducer(state = initialState, action) {
             return Object.assign({}, state, { parent: action.payload });
         
         case GET_DANCER_INFO + '_FULFILLED':
-        return Object.assign({}, state, { parent: action.payload });
+            return Object.assign({}, state, { parent: action.payload });
+
+        case GET_ALL_INFO + '_FULFILLED':
+            return Object.assign({}, state, { parent: action.payload });
 
         default:
             return state;

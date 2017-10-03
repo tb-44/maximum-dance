@@ -151,6 +151,7 @@ class Dashboard extends Component {
           token={ this.onToken }
           stripeKey={ process.env.REACT_APP_PUBLISHABLE_KEY }
           amount={ 30000 } 
+          name="Maximum Dance"
         />
         <br/>
         <p>Thank you for your business</p>

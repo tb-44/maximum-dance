@@ -22,5 +22,11 @@ module.exports = {
         req.app.get('db').getDancerInfo(req.body.id).then(dancers => {
             res.send(dancers)
         })
+    },
+
+    getAllInfo: (req, res) => {
+        req.app.get('db').getAllInfo(req.body.id).then(parent_id => {
+            res.send(parent_id)
+        })
     }
 }

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pinyon+Script'); 
 
+* {
+  margin: 0;
+  padding: 0;
+}
  .main-container {
   display: flex;
   justify-content: center;
@@ -14,7 +18,17 @@
   height: auto;
   top: 0;
   left: 0;
-  opacity: 0.85;
+  // z-index: 100;
+}
+
+.backgroundvid {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  // margin: -20px 0px 0px -2px;
 }
 
 .Typist {
@@ -28,7 +42,7 @@
   font-family: 'Pinyon Script', cursive;
   opacity: 0.7;
   background-color: rgba(48, 44, 44, 0.35);
-  
+  // z-index: 100;
 }
 
 .Typist .Cursor {
@@ -72,27 +86,27 @@
  button.logo {
   z-index: 100;
   position: fixed;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding: 10px 10px 10px 10px;
+  // padding-left: 15px;
   background-color: #F4BEBC;
  }
 
 @media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
+  .backgroundvid {
     height: 300%;
     top: -100%;
   }
 } 
 
  @media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
+  .backgroundvid {
     width: 300%;
     left: -100%;
   }
 }
 
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('https://i.pinimg.com/736x/15/44/87/154487f8523d2f3d2faf7aacd1fc3d57--dancing-in-the-street-street-dance.jpg') center center / cover no-repeat;
-  }
-} 
+// @media (max-width: 767px) {
+//   .fullscreen-bg {
+//     background: url('https://i.pinimg.com/736x/15/44/87/154487f8523d2f3d2faf7aacd1fc3d57--dancing-in-the-street-street-dance.jpg') center center / cover no-repeat;
+//   }
+// } 

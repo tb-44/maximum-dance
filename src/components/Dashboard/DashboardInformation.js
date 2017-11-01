@@ -42,7 +42,8 @@ class DashboardInformation extends Component {
 
       <div id="dashboardInfo">
         <div>
-          <h2>Your student(s) are already registered!</h2>
+          {/* <h2>Your student(s) are already registered!</h2> */}
+          {/* <h2>{ this.props.dancer ? "Your student(s) are already registered!" : "You currently do not have any student(s) registered!" }</h2> */}
           <h3>Please pay your monthly fees below with credit card:</h3>
         </div>
         {dancers}

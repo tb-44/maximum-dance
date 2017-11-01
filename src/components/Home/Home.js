@@ -5,6 +5,7 @@ import Sidenav from './Sidenav';
 import homeIcon from './maximum-dance-logo-video-overlay.png';
 import svg from './hamburger.svg';
 import Typist from 'react-typist';
+import background from './background3.jpg';
 
 class Home extends Component {
 	constructor() {
@@ -52,10 +53,17 @@ class Home extends Component {
 					/>
 
 					<img src={homeIcon} alt='homeIcon' className="video-overlay" />
+					
 					<video className="fullscreen-bg__video" autoPlay preload loop muted width="650" height="350">
 						<source src={videobkgd} type="video/mp4" />
 						<source src={videobkgd1} type="video/webm" />
 					</video>
+
+					{/* <iframe className="backgroundvid" src="https://player.vimeo.com/video/240670787?autoplay=1&loop=1" title="backgroundvid"
+					allowFullScreen ></iframe> */}
+
+					{/* <img className="background" src={background} alt="background"/> */}
+
 				</div>
 			</div>
 		)

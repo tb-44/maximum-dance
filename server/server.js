@@ -12,7 +12,7 @@ const stripe = require('stripe')( process.env.REACT_APP_SECRET_KEY );
 
 const app = express();
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/../public/build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(cors());
 
 app.use(session({

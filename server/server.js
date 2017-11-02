@@ -56,9 +56,8 @@ passport.serializeUser(function(user, done) {
   done(null, user[0]);
 });
 
-//USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
+//USER COMES FROM SESSION
 passport.deserializeUser(function(user, done){
-  console.log('deserial: ', user);
 -  // app.get('db').find_session_parent(user[0].id).then(user => {
 -  //   return done(null, user[0]);
 -  // })
@@ -82,7 +81,7 @@ app.get('/auth/me', (req, res) => {
 
 //ENDPOINT (Logout)
 app.get('/auth/logout', (req, res) => {
-  req.logout() //PASSPORT GIVES US THIS TO TERMINATE A LOGIN SESSION
+  req.logout() 
   return res.redirect(302, 'http://localhost:3000/#/'); 
 })
 
@@ -92,8 +91,7 @@ app.post('/api/create_dancer/:id', controller.createDancer);
 app.post('/api/getDancerInfo', controller.getDancer);
 app.get('/api/getAllInfo', controller.getAllInfo);
 
-app.post('/api/payment', function(req, res, next){
-  //convert amount to pennies
+app.post('/api/payment', function(req, res, next) {
   const amountArray = req.body.amount.toString().split('');
   const pennies = [];
   for (var i = 0; i < amountArray.length; i++) {
@@ -117,7 +115,7 @@ app.post('/api/payment', function(req, res, next){
   const convertedAmt = parseInt(pennies.join(''));
 
   const charge = stripe.charges.create({
-  amount: convertedAmt, // amount in cents, again
+  amount: convertedAmt,
   currency: 'usd',
   source: req.body.token.id,
   description: 'Test charge from react app'

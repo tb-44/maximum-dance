@@ -12,8 +12,8 @@ const stripe = require('stripe')( process.env.REACT_APP_SECRET_KEY );
 
 const app = express();
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/../public/build` ) );
 app.use(cors());
+app.use( express.static( `${__dirname}/../build` ) );
 
 app.use(session({
   secret: process.env.SECRET,
@@ -66,8 +66,8 @@ passport.deserializeUser(function(user, done){
 
 //ENDPOINT #1 - AUTH0 AUTHENTICATION
 app.get('/auth', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/dashboard',
-  failureRedirect: 'http://localhost:3000/#/parentportal'
+  successRedirect: 'http://138.68.3.3:3005/#//#/dashboard',
+  failureRedirect: 'http://138.68.3.3:3005/#/parentportal'
 }));
 
 //ENDPOINT (Login)
@@ -124,6 +124,11 @@ app.post('/api/payment', function(req, res, next) {
     return res.sendStatus(200);
 });
 });
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})
 
 let PORT = 3005;
 app.listen(PORT, () => {

@@ -4,6 +4,7 @@
 //   margin: 0;
 //   padding: 0;
 // }
+
  .main-container {
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@
 } 
 
 .video-overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: auto;
   top: 0;
@@ -105,8 +106,8 @@
   }
 }
 
-// @media (max-width: 767px) {
-//   .fullscreen-bg {
-//     background: url('https://i.pinimg.com/736x/15/44/87/154487f8523d2f3d2faf7aacd1fc3d57--dancing-in-the-street-street-dance.jpg') center center / cover no-repeat;
-//   }
-// } 
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('https://i.pinimg.com/736x/15/44/87/154487f8523d2f3d2faf7aacd1fc3d57--dancing-in-the-street-street-dance.jpg') center center / cover no-repeat;
+  }
+} 

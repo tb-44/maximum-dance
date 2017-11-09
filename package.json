@@ -52,5 +52,9 @@
   "bugs": {
     "url": "https://github.com/tb-44/maximum-dance/issues"
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 471faf3e9b06739176c590d238970c8b1e5a6cba
   "proxy": "http://localhost:3005"
 }

@@ -12,10 +12,6 @@ const stripe = require('stripe')( process.env.REACT_APP_SECRET_KEY );
 
 const app = express();
 app.use( bodyParser.json() );
-<<<<<<< HEAD
-=======
-app.use( express.static( `${__dirname}/../build` ) );
->>>>>>> 471faf3e9b06739176c590d238970c8b1e5a6cba
 app.use(cors());
 app.use( express.static( `${__dirname}/../build` ) );
 

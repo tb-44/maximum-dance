@@ -66,7 +66,7 @@ passport.deserializeUser(function(user, done){
 
 //ENDPOINT #1 - AUTH0 AUTHENTICATION
 app.get('/auth', passport.authenticate('auth0', {
-  successRedirect: 'http://138.68.3.3:3005/#//#/dashboard',
+  successRedirect: 'http://138.68.3.3:3005/#/dashboard',
   failureRedirect: 'http://138.68.3.3:3005/#/parentportal'
 }));
 

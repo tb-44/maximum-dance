@@ -82,7 +82,7 @@ app.get('/auth/me', (req, res) => {
 //ENDPOINT (Logout)
 app.get('/auth/logout', (req, res) => {
   req.logout() 
-  return res.redirect(302, 'http://localhost:3000/#/'); 
+  return res.redirect(302, 'http://138.68.3.3:3005/#/parentportal'); 
 })
 
 //PARENT AND DANCER ENDPOINTS FROM CONTROLLER

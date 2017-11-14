@@ -26,7 +26,7 @@ export function getParentInfo() {
 }
 
 export function addParentInfo(obj){
-    const newParentInfo = axios.post('http://localhost:3005/api/create_parent', obj).then( res => {
+    const newParentInfo = axios.post('/api/create_parent', obj).then( res => {
         return res.data
     })
     return {
@@ -36,7 +36,7 @@ export function addParentInfo(obj){
 }
 
 export function addDancerInfo(obj, id){
-    const newDancerInfo = axios.post('http://localhost:3005/api/create_dancer/' + id, obj).then( res => {
+    const newDancerInfo = axios.post('/api/create_dancer/' + id, obj).then( res => {
         return res.data;
     })
     return {
@@ -46,7 +46,7 @@ export function addDancerInfo(obj, id){
 }
 
 export function getDancerInfo(id) {
-    const displayDancerInfo = axios.get('http://localhost:3005/api/getDancerInfo/', id).then( res => {
+    const displayDancerInfo = axios.get('/api/getDancerInfo/', id).then( res => {
         console.log(res);
         return res.data;
     })
@@ -57,7 +57,7 @@ export function getDancerInfo(id) {
 }
 
 export function getAllInfo(id) {
-    const getAllInformation = axios.get('http://localhost:3005/api/getAllInfo', id).then( res => {
+    const getAllInformation = axios.get('/api/getAllInfo', id).then( res => {
         return res.data;
     })
     return {

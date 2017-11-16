@@ -58,10 +58,10 @@ passport.serializeUser(function(user, done) {
 
 //USER COMES FROM SESSION
 passport.deserializeUser(function(user, done){
--  // app.get('db').find_session_parent(user[0].id).then(user => {
--  //   return done(null, user[0]);
--  // })
-  done(null, user);
+    app.get('db').find_session_parent(user[0].id).then(user => {
+    return done(null, user[0]);
+  });
+  // done(null, user);
 });
 
 //ENDPOINT #1 - AUTH0 AUTHENTICATION

@@ -25,7 +25,7 @@ class DashboardInformation extends Component {
   }
 
   render() {
-    // console.log(this.state.dancerInfo)
+    
     var classFees = 100;
     var dancers = this.state.dancerInfo.map((dancer, i) => {
       return (
@@ -42,8 +42,8 @@ class DashboardInformation extends Component {
 
       <div id="dashboardInfo">
         <div>
-          {/* <h2>Your student(s) are already registered!</h2> */}
-          {/* <h2>{ this.props.dancer ? "Your student(s) are already registered!" : "You currently do not have any student(s) registered!" }</h2> */}
+          <h2>Your student(s) are already registered!</h2>
+          <h2>{ this.props.dancer ? "Your student(s) are already registered!" : "You currently do not have any student(s) registered!" }</h2>
           <h3>Please pay your monthly fees below with credit card:</h3>
         </div>
         {dancers}

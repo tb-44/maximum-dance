@@ -5,7 +5,8 @@ import Sidenav from './Sidenav';
 import homeIcon from './maximum-dance-logo-video-overlay.png';
 import svg from './hamburger.svg';
 import Typist from 'react-typist';
-import background from './background3.jpg';
+import LandingHeader from './LandingHeader';
+// import background from './background3.jpg';
 
 class Home extends Component {
 	constructor() {
@@ -37,20 +38,24 @@ class Home extends Component {
 		return (
 			<div className="main-container">
 				<div className="fullscreen-bg">
+			
 
 					<Typist className="MyTypist_Text">
   						Dancing is like dreaming with your feet
 					</Typist>
 
-					<button className="logo" onClick={ () => this.toggleMenu() }>
+					{/* <button className="logo" onClick={ () => this.toggleMenu() }>
 						<img src={svg} alt="" />
-					</button>
+					</button> */}
 
-					<Sidenav toggleMenu={this.toggleMenu}
+					{/* <Sidenav toggleMenu={this.toggleMenu}
 						showMenu={this.state.showMenu}
 						toggleSubMenu={this.toggleSubMenu}
 						showSubMenu={this.state.showSubMenu} 
-					/>
+					/> */}
+
+					<LandingHeader/>
+					
 
 					<img src={homeIcon} alt='homeIcon' className="video-overlay" />
 					
@@ -58,12 +63,12 @@ class Home extends Component {
 						<source src={videobkgd} type="video/mp4" />
 						<source src={videobkgd1} type="video/webm" />
 					</video>
+					
 
 					{/* <iframe className="backgroundvid" src="https://player.vimeo.com/video/240670787?autoplay=1&loop=1" title="backgroundvid"
 					allowFullScreen ></iframe> */}
 
 					{/* <img className="background" src={background} alt="background"/> */}
-
 				</div>
 			</div>
 		)
